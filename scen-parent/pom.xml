@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>scen-parent</groupId>
-    <artifactId>com.scen.cloud</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.scen.cloud</groupId>
+    <artifactId>scen-parent</artifactId>
+    <version>2.0-SNAPSHOT</version>
     <modules>
         <module>../scen-core-parent</module>
         <module>../scen-api-parent</module>
@@ -15,6 +15,107 @@
         <module>../scen-cloud-parent</module>
     </modules>
     <packaging>pom</packaging>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.0.1.RELEASE</version>
+        <relativePath/>
+    </parent>
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+        <!--spring cloud-->
+        <spring-cloud.version>Finchley.M9</spring-cloud.version>
+        <!--分页插件-->
+        <pagehelpe.springboot.version>1.2.5</pagehelpe.springboot.version>
+        <!--mybatis-->
+        <mybatis.springboot.version>1.3.2</mybatis.springboot.version>
+        <!--通用mapper-->
+        <mapper.springboot.version>2.0.2</mapper.springboot.version>
+        <!--mysql数据库驱动-->
+        <mysql.version>5.1.46</mysql.version>
+        <!--Druid德鲁伊连接池-->
+        <druid.springboot.version>1.1.9</druid.springboot.version>
+        <!--pojo关联数据库表注解-->
+        <persistence.version>1.0.2</persistence.version>
+        <!--处理excel导出报表-->
+        <excel.jxl.version>2.6.12</excel.jxl.version>
+        <!--Apache net工具包-->
+        <commons.net.version>3.6</commons.net.version>
+        <!-- Jackson Json处理工具包 -->
+        <jackson.version>2.9.5</jackson.version>
+    </properties>
 
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelpe.springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.springboot.version}</version>
+            </dependency>
+            <!--通用mapper-->
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>${mapper.springboot.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.springboot.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>javax.persistence</groupId>
+                <artifactId>persistence-api</artifactId>
+                <version>${persistence.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>net.sourceforge.jexcelapi</groupId>
+                <artifactId>jxl</artifactId>
+                <version>${excel.jxl.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>commons-net</groupId>
+                <artifactId>commons-net</artifactId>
+                <version>${commons.net.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-databind</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
 </project>

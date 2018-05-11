@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>scen-cloud-parent</artifactId>
-        <groupId>scen-parent</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <groupId>com.scen.cloud</groupId>
+        <version>2.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 

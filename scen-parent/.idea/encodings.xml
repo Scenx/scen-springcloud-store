@@ -1,6 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/../scen-api-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-admin-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-cache-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-cart-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-item-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-order-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-portal-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-search-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-sso-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-cloud-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-cloud-parent/scen-apollo-client" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-cloud-parent/scen-cloud-apigateway" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-cloud-parent/scen-cloud-registrycenter" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-cloud-parent/scen-cloud-turbine" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-core-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-core-parent/scen-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-core-parent/scen-dao" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-core-parent/scen-pojo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-admin-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-cache-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-cart-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-item-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-order-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-portal-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-search-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-sso-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-web-parent" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-web-parent/scen-admin-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-web-parent/scen-portal-web" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-web-parent/scen-sso-web" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
