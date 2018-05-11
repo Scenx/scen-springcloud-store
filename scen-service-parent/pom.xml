@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>com.scen.cloud</artifactId>
+        <groupId>scen-parent</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../scen-parent/pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>scen-service-parent</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>scen-admin-service</module>
+        <module>scen-item-service</module>
+        <module>scen-cart-service</module>
+        <module>scen-order-service</module>
+        <module>scen-search-service</module>
+        <module>scen-cache-service</module>
+        <module>scen-sso-service</module>
+        <module>scen-portal-service</module>
+    </modules>
+
+
+</project>

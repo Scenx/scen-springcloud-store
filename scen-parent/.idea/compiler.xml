@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="scen-admin-api" />
+        <module name="scen-admin-service" />
+        <module name="scen-admin-web" />
+        <module name="scen-apollo-client" />
+        <module name="scen-cache-api" />
+        <module name="scen-cache-service" />
+        <module name="scen-cart-api" />
+        <module name="scen-cart-service" />
+        <module name="scen-cloud-apigateway" />
+        <module name="scen-cloud-registrycenter" />
+        <module name="scen-cloud-turbine" />
+        <module name="scen-common" />
+        <module name="scen-dao" />
+        <module name="scen-item-api" />
+        <module name="scen-item-service" />
+        <module name="scen-order-api" />
+        <module name="scen-order-service" />
+        <module name="scen-pojo" />
+        <module name="scen-portal-api" />
+        <module name="scen-portal-service" />
+        <module name="scen-portal-web" />
+        <module name="scen-search-api" />
+        <module name="scen-search-service" />
+        <module name="scen-sso-api" />
+        <module name="scen-sso-service" />
+        <module name="scen-sso-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8" />
+  </component>
+</project>
