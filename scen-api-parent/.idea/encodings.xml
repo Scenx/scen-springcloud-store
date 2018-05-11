@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scen-admin-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scen-cache-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scen-cart-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scen-item-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scen-order-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scen-portal-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scen-search-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/scen-sso-api" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

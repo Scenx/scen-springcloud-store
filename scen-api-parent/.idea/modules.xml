@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/scen-admin-api/scen-admin-api.iml" filepath="$PROJECT_DIR$/scen-admin-api/scen-admin-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scen-api-parent.iml" filepath="$PROJECT_DIR$/scen-api-parent.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scen-cache-api/scen-cache-api.iml" filepath="$PROJECT_DIR$/scen-cache-api/scen-cache-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scen-cart-api/scen-cart-api.iml" filepath="$PROJECT_DIR$/scen-cart-api/scen-cart-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scen-item-api/scen-item-api.iml" filepath="$PROJECT_DIR$/scen-item-api/scen-item-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scen-order-api/scen-order-api.iml" filepath="$PROJECT_DIR$/scen-order-api/scen-order-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scen-portal-api/scen-portal-api.iml" filepath="$PROJECT_DIR$/scen-portal-api/scen-portal-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scen-search-api/scen-search-api.iml" filepath="$PROJECT_DIR$/scen-search-api/scen-search-api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/scen-sso-api/scen-sso-api.iml" filepath="$PROJECT_DIR$/scen-sso-api/scen-sso-api.iml" />
+    </modules>
+  </component>
+</project>

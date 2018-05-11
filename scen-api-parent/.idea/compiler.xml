@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="scen-admin-api" />
+        <module name="scen-cache-api" />
+        <module name="scen-cart-api" />
+        <module name="scen-item-api" />
+        <module name="scen-order-api" />
+        <module name="scen-portal-api" />
+        <module name="scen-search-api" />
+        <module name="scen-sso-api" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel target="8">
+      <module name="scen-admin-api" target="1.8" />
+      <module name="scen-api-parent" target="1.8" />
+      <module name="scen-cache-api" target="1.8" />
+      <module name="scen-cart-api" target="1.8" />
+      <module name="scen-item-api" target="1.8" />
+      <module name="scen-order-api" target="1.8" />
+      <module name="scen-portal-api" target="1.8" />
+      <module name="scen-search-api" target="1.8" />
+      <module name="scen-sso-api" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
