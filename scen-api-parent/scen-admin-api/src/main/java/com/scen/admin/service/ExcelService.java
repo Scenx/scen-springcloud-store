@@ -24,5 +24,5 @@ public interface ExcelService {
      * @param endPrice
      * @throws Exception
      */
-    void getExcel(HttpServletResponse response, Long id, String title, String catName, Long startPrice, Long endPrice) throws Exception;
+    void getExcel(Long id, String title, String catName, Long startPrice, Long endPrice) throws Exception;
 }

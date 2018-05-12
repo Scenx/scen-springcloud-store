@@ -6,7 +6,6 @@ import com.scen.vo.EUTreeNode;
 import com.scen.vo.ScenResult;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -23,17 +22,17 @@ public class ContentCategoryServiceHystrix implements ContentCategoryService {
     }
 
     @Override
-    public ScenResult insertContenCategory(Long parentId, String name) {
+    public ScenResult insertContenCategory(Long parentId, String name) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 
     @Override
-    public ScenResult deleteContenCategory(Long id) {
+    public ScenResult deleteContenCategory(Long id) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 
     @Override
-    public void updateContentCategory(HttpServletResponse response, ContentCategory contentCategory) throws Exception {
-        response.getWriter().print("服务不可用");
+    public void updateContentCategory(ContentCategory contentCategory) throws Exception {
+
     }
 }

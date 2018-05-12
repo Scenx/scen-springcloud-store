@@ -5,8 +5,9 @@ import com.scen.pojo.ContentCategory;
 import com.scen.vo.EUTreeNode;
 import com.scen.vo.ScenResult;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
-import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 /**
@@ -23,7 +24,10 @@ public interface ContentCategoryService {
      * @param parentId
      * @return
      */
-    List<EUTreeNode> getCategoryList(Long parentId);
+    @RequestMapping("/ContentCategoryService/getCategoryList")
+    List<EUTreeNode> getCategoryList(
+            @RequestParam("parentId") Long parentId
+    );
 
     /**
      * 添加分类节点
@@ -31,22 +35,35 @@ public interface ContentCategoryService {
      * @param parentId
      * @param name
      * @return
+     * @throws Exception
      */
-    ScenResult insertContenCategory(Long parentId, String name);
+    @RequestMapping("/ContentCategoryService/insertContenCategory")
+    ScenResult insertContenCategory(
+            @RequestParam("parentId") Long parentId,
+            @RequestParam("name") String name
+    ) throws Exception;
 
     /**
      * 删除分类节点
      *
      * @param id
      * @return
+     * @throws Exception
      */
-    ScenResult deleteContenCategory(Long id);
+    @RequestMapping("/ContentCategoryService/deleteContenCategory")
+    ScenResult deleteContenCategory(
+            @RequestParam("id") Long id
+    ) throws Exception;
 
 
     /**
      * 更新分类节点
      *
      * @param contentCategory
+     * @throws Exception
      */
-    void updateContentCategory(HttpServletResponse response, ContentCategory contentCategory) throws Exception;
+    @RequestMapping("/ContentCategoryService/updateContentCategory")
+    void updateContentCategory(
+            ContentCategory contentCategory
+    ) throws Exception;
 }

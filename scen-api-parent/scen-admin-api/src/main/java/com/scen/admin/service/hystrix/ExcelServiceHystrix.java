@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 public class ExcelServiceHystrix implements ExcelService {
 
     @Override
-    public void getExcel(HttpServletResponse response, Long id, String title, String catName, Long startPrice, Long endPrice) throws Exception {
-        response.getWriter().print("服务不可用");
+    public void getExcel(Long id, String title, String catName, Long startPrice, Long endPrice) throws Exception {
+
     }
 }

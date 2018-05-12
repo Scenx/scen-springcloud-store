@@ -1,7 +1,7 @@
 package com.scen.admin.controller;
 
-import com.scen.admin.service.AdminUserService;
-import com.scen.pojo.AdminUser;
+import com.scen.admin.service.ContentCategoryService;
+import com.scen.vo.ScenResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,11 +12,17 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class TestController {
+
     @Autowired
-    private AdminUserService adminUserService;
+    private ContentCategoryService contentCategoryService;
 
     @RequestMapping("/test")
-    public AdminUser test() {
-        return adminUserService.getByUserName("admin");
+    public ScenResult test() {
+        try {
+            return contentCategoryService.deleteContenCategory(99L);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ScenResult.build(233, "服务不可用");
+        }
     }
 }
