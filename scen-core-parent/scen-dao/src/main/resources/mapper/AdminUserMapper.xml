@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scen.dao.AdminUserDao">
+
+    <select id="getRoles" parameterType="String" resultType="String">
+		select r.roleName from tb_admin_user u,tb_admin_role r where u.roleId=r.id and u.username=#{username}
+	</select>
+
+    <select id="getPermissions" parameterType="String" resultType="String">
+		select p.permissionName from tb_admin_user u,tb_admin_role r,tb_admin_permission p where u.roleId=r.id and p.roleId=r.id and u.username=#{username}
+	</select>
+</mapper>

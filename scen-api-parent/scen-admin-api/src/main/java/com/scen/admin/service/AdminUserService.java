@@ -1,9 +1,10 @@
 package com.scen.admin.service;
 
 import com.scen.admin.service.hystrix.AdminUserServiceHystrix;
-import com.scen.admin.service.hystrix.ExcelServiceHystrix;
 import com.scen.pojo.AdminUser;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Set;
 
@@ -18,24 +19,33 @@ public interface AdminUserService {
     /**
      * 通过用户名查询用户
      *
-     * @param userName
+     * @param username
      * @return
      */
-    AdminUser getByUserName(String userName);
+    @RequestMapping("/adminUserService/getByUserName")
+    AdminUser getByUserName(
+            @RequestParam("username") String username
+    );
 
     /**
      * 通过用户名查询角色信息
      *
-     * @param userName
+     * @param username
      * @return
      */
-    Set<String> getRoles(String userName);
+    @RequestMapping("/adminUserService/getRoles")
+    Set<String> getRoles(
+            @RequestParam("username") String username
+    );
 
     /**
      * 通过用户名查询权限信息
      *
-     * @param userName
+     * @param username
      * @return
      */
-    Set<String> getPermissions(String userName);
+    @RequestMapping("/adminUserService/getPermissions")
+    Set<String> getPermissions(
+            @RequestParam("username") String username
+    );
 }

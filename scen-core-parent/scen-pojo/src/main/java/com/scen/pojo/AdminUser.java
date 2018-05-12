@@ -9,7 +9,7 @@ public class AdminUser {
 
     @Id
     private Long id;
-    private String userName;
+    private String username;
     private String password;
     private Long roleId;
 
@@ -24,11 +24,11 @@ public class AdminUser {
 
 
     public String getUserName() {
-        return userName;
+        return username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUserName(String username) {
+        this.username = username;
     }
 
 

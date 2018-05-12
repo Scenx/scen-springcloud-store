@@ -1,17 +1,16 @@
-package com.scen.admin.service.hystrix;
+package com.scen.admin.service.impl;
 
 import com.scen.admin.service.ExcelService;
-import org.springframework.stereotype.Component;
 
 import javax.servlet.http.HttpServletResponse;
+
 /**
- * 生成报表熔断器
+ * 生成报表服务提供者
  *
  * @author Scen
  * @date 2018/5/11 22:02
  */
-@Component
-public class ExcelServiceHystrix implements ExcelService {
+public class ExcelServiceImpl implements ExcelService {
 
     @Override
     public void getExcel(HttpServletResponse response, Long id, String title, String catName, Long startPrice, Long endPrice) throws Exception {

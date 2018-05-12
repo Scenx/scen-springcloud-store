@@ -394,7 +394,7 @@ public class ExcelUtil {
      * @MethodName : getFieldValueByNameSequence
      * @Description :
      * 根据带路径或不带路径的属性名获取属性值
-     * 即接受简单属性名，如userName等，又接受带路径的属性名，如student.department.name等
+     * 即接受简单属性名，如username等，又接受带路径的属性名，如student.department.name等
      */
     private static Object getFieldValueByNameSequence(String fieldNameSequence, Object o) throws Exception {
 

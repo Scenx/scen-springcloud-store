@@ -2,6 +2,7 @@ package com.scen.admin.service.hystrix;
 
 import com.scen.admin.service.AdminUserService;
 import com.scen.pojo.AdminUser;
+import org.springframework.stereotype.Component;
 
 import java.util.Set;
 
@@ -11,20 +12,21 @@ import java.util.Set;
  * @author Scen
  * @date 2018/5/11 22:30
  */
+@Component
 public class AdminUserServiceHystrix implements AdminUserService {
 
     @Override
-    public AdminUser getByUserName(String userName) {
+    public AdminUser getByUserName(String username) {
         return null;
     }
 
     @Override
-    public Set<String> getRoles(String userName) {
+    public Set<String> getRoles(String username) {
         return null;
     }
 
     @Override
-    public Set<String> getPermissions(String userName) {
+    public Set<String> getPermissions(String username) {
         return null;
     }
 }
