@@ -3,10 +3,13 @@ package com.scen.pojo;
 
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.io.Serializable;
 import java.util.Date;
 
 @Table(name = "tb_order")
-public class Order {
+public class Order implements Serializable {
+
+    private static final long serialVersionUID = 8584385339782625975L;
 
     @Id
     private String orderId;

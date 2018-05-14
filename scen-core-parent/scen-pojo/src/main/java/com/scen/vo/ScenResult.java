@@ -3,12 +3,16 @@ package com.scen.vo;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * 项目自定义响应结构
  */
-public class ScenResult {
+public class ScenResult implements Serializable {
+
+    private static final long serialVersionUID = 1421209074848903754L;
+
     // 定义jackson对象
     private static final ObjectMapper MAPPER = new ObjectMapper();
 

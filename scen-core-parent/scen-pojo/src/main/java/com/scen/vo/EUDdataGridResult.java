@@ -1,12 +1,16 @@
 package com.scen.vo;
 
+import java.io.Serializable;
 import java.util.List;
 
 /**
  * @author Scen
  * @date 2018/3/9 23:35
  */
-public class EUDdataGridResult {
+public class EUDdataGridResult implements Serializable {
+
+    private static final long serialVersionUID = -2824382913594869450L;
+
     private Long total;
     private List<?> rows;
 

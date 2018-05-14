@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="FUSUsageTrigger">
-    <session id="-290476065">
-      <usages-collector id="statistics.spring.boot.mvc.usages">
-        <counts>
-          <entry key="RestClientRequestEditorNavigator.fromCode" value="3" />
-          <entry key="RestClientRequestRunnerNavigator.fromCode" value="7" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
-  <component name="Kotlin2JsCompilerArguments">
-    <option name="sourceMapEmbedSources" />
-    <option name="sourceMapPrefix" />
-  </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
       <list>
