@@ -6,6 +6,7 @@ import com.scen.vo.EUTreeNode;
 import com.scen.vo.ScenResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -21,10 +22,10 @@ public interface ContentCategoryService {
     /**
      * 获取分类节点
      *
-     * @param parentId
-     * @return
+     * @param parentId 父节点id
+     * @return 指定父id下的内容分类
      */
-    @RequestMapping("/ContentCategoryService/getCategoryList")
+    @RequestMapping("/contentCategoryService/getCategoryList")
     List<EUTreeNode> getCategoryList(
             @RequestParam("parentId") Long parentId
     );
@@ -32,12 +33,12 @@ public interface ContentCategoryService {
     /**
      * 添加分类节点
      *
-     * @param parentId
-     * @param name
-     * @return
-     * @throws Exception
+     * @param parentId 父节点id
+     * @param name 节点名
+     * @return 自定义响应结构
+     * @throws Exception 抛出异常回滚事务
      */
-    @RequestMapping("/ContentCategoryService/insertContenCategory")
+    @RequestMapping("/contentCategoryService/insertContenCategory")
     ScenResult insertContenCategory(
             @RequestParam("parentId") Long parentId,
             @RequestParam("name") String name
@@ -46,11 +47,11 @@ public interface ContentCategoryService {
     /**
      * 删除分类节点
      *
-     * @param id
-     * @return
-     * @throws Exception
+     * @param id 节点id
+     * @return 自定义响应结构
+     * @throws Exception 抛出异常回滚事务
      */
-    @RequestMapping("/ContentCategoryService/deleteContenCategory")
+    @RequestMapping("/contentCategoryService/deleteContenCategory")
     ScenResult deleteContenCategory(
             @RequestParam("id") Long id
     ) throws Exception;
@@ -59,10 +60,10 @@ public interface ContentCategoryService {
     /**
      * 更新分类节点
      *
-     * @param contentCategory
-     * @throws Exception
+     * @param contentCategory 内容分类对象
+     * @throws Exception 抛出异常回滚事务
      */
-    @RequestMapping("/ContentCategoryService/updateContentCategory")
+    @RequestMapping(value = "/contentCategoryService/updateContentCategory", method = RequestMethod.POST)
     void updateContentCategory(
             ContentCategory contentCategory
     ) throws Exception;

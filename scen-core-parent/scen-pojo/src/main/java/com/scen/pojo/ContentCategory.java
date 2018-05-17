@@ -1,6 +1,8 @@
 package com.scen.pojo;
 
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
@@ -12,6 +14,7 @@ public class ContentCategory implements Serializable {
     private static final long serialVersionUID = 8874354147366720256L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private Long parentId;
     private String name;

@@ -20,12 +20,12 @@ public class ContentServiceHystrix implements ContentService {
     }
 
     @Override
-    public ScenResult saveContent(Content content) {
+    public ScenResult saveContent(Content content) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 
     @Override
-    public ScenResult deleteContent(Long[] ids) {
+    public ScenResult deleteContent(Long[] ids) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 

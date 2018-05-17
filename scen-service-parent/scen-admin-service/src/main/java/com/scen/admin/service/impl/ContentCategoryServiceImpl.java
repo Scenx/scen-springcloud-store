@@ -7,6 +7,7 @@ import com.scen.vo.EUTreeNode;
 import com.scen.vo.ScenResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Example;
 
@@ -86,7 +87,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public void updateContentCategory(ContentCategory contentCategory) throws Exception {
+    public void updateContentCategory(@RequestBody ContentCategory contentCategory) throws Exception {
         contentCategory.setUpdated(new Date());
         contentCategoryDao.updateByPrimaryKeySelective(contentCategory);
     }

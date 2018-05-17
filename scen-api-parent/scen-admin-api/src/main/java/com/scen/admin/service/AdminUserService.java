@@ -19,8 +19,8 @@ public interface AdminUserService {
     /**
      * 通过用户名查询用户
      *
-     * @param username
-     * @return
+     * @param username 用户名
+     * @return 管理员对象
      */
     @RequestMapping("/adminUserService/getByUserName")
     AdminUser getByUserName(
@@ -30,8 +30,8 @@ public interface AdminUserService {
     /**
      * 通过用户名查询角色信息
      *
-     * @param username
-     * @return
+     * @param username 用户名
+     * @return Set集合包含查出来的所有用户
      */
     @RequestMapping("/adminUserService/getRoles")
     Set<String> getRoles(
@@ -41,8 +41,8 @@ public interface AdminUserService {
     /**
      * 通过用户名查询权限信息
      *
-     * @param username
-     * @return
+     * @param username 用户名
+     * @return Set集合包含查出来的所有用户
      */
     @RequestMapping("/adminUserService/getPermissions")
     Set<String> getPermissions(

@@ -1,7 +1,7 @@
 package com.scen.admin.controller;
 
 import com.scen.admin.service.ContentCategoryService;
-import com.scen.vo.ScenResult;
+import com.scen.pojo.ContentCategory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,12 +17,7 @@ public class TestController {
     private ContentCategoryService contentCategoryService;
 
     @RequestMapping("/test")
-    public ScenResult test() {
-        try {
-            return contentCategoryService.deleteContenCategory(99L);
-        } catch (Exception e) {
-            e.printStackTrace();
-            return ScenResult.build(233, "服务不可用");
-        }
+    public void test(ContentCategory contentCategory) throws Exception {
+        contentCategoryService.updateContentCategory(contentCategory);
     }
 }
