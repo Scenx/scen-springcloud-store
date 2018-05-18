@@ -18,6 +18,6 @@ public class TestController {
 
     @RequestMapping("/test")
     public void test(ContentCategory contentCategory) throws Exception {
-        contentCategoryService.updateContentCategory(contentCategory);
+        contentCategoryService.insertContenCategory(30L, "卧槽卧槽卧槽");
     }
 }

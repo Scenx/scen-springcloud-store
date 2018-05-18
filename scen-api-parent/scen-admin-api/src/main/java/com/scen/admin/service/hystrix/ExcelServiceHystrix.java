@@ -3,7 +3,6 @@ package com.scen.admin.service.hystrix;
 import com.scen.admin.service.ExcelService;
 import org.springframework.stereotype.Component;
 
-import javax.servlet.http.HttpServletResponse;
 /**
  * 生成报表熔断器
  *

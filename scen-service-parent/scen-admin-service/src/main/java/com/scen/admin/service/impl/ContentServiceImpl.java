@@ -7,8 +7,11 @@ import com.scen.dao.ContentDao;
 import com.scen.pojo.Content;
 import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ScenResult;
+import org.springframework.amqp.core.AmqpTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronization;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.web.bind.annotation.RestController;
 import tk.mybatis.mapper.entity.Example;
 
@@ -26,6 +29,9 @@ public class ContentServiceImpl implements ContentService {
 
     @Autowired
     private ContentDao contentDao;
+
+    @Autowired
+    private AmqpTemplate amqpTemplate;
 
     @Override
     public EUDdataGridResult getContentList(Integer page, Integer rows, Long categoryId) {
@@ -58,6 +64,12 @@ public class ContentServiceImpl implements ContentService {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
+        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
+            @Override
+            public void afterCommit() {
+                amqpTemplate.convertAndSend("syncContent", content.getCategoryId());
+            }
+        });
         return ScenResult.ok();
     }
 
