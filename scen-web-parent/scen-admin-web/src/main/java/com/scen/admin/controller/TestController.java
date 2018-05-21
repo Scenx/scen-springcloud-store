@@ -1,7 +1,11 @@
 package com.scen.admin.controller;
 
 import com.scen.admin.service.ContentCategoryService;
+import com.scen.admin.service.ContentService;
+import com.scen.pojo.Content;
 import com.scen.pojo.ContentCategory;
+import com.scen.vo.EUDdataGridResult;
+import com.scen.vo.ScenResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,10 +18,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private ContentCategoryService contentCategoryService;
+    private ContentService contentService;
 
     @RequestMapping("/test")
-    public void test(ContentCategory contentCategory) throws Exception {
-        contentCategoryService.insertContenCategory(30L, "卧槽卧槽卧槽");
+    public ScenResult test() throws Exception {
+        Content content = new Content();
+        content.setId(1L);
+        content.setCategoryId(89L);
+        return contentService.saveContent(content);
     }
 }

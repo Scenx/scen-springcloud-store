@@ -55,21 +55,21 @@ public class ContentServiceImpl implements ContentService {
     @Transactional(rollbackFor = Exception.class)
     public ScenResult saveContent(Content content) throws Exception {
         //        补全内容
-        content.setCreated(new Date());
+        /*content.setCreated(new Date());
         content.setUpdated(new Date());
-        contentDao.insert(content);
+        contentDao.insert(content);*/
 //        添加缓存同步逻辑
 //        try {
 //            HttpClientUtil.doGet(REST_BASE_URL + REST_CONTENT_SYNC_URL + content.getCategoryId());
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
+        /*TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
             @Override
-            public void afterCommit() {
+            public void afterCommit() {*/
                 amqpTemplate.convertAndSend("syncContent", content.getCategoryId());
-            }
-        });
+        /*    }
+        });*/
         return ScenResult.ok();
     }
 

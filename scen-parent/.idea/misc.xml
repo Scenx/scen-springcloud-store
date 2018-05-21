@@ -11,6 +11,13 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1989288452">
+      <usages-collector id="statistics.spring.boot.mvc.usages">
+        <counts>
+          <entry key="RestClientRequestRunnerNavigator.fromCode" value="10" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="MavenProjectsManager">
     <option name="originalFiles">
