@@ -1,7 +1,12 @@
 package com.scen.admin.service;
 
 import com.scen.admin.service.hystrix.ExcelServiceHystrix;
+import com.scen.vo.ItemBean;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import java.util.List;
 
 /**
  * 生成报表接口
@@ -19,7 +24,15 @@ public interface ExcelService {
      * @param catName
      * @param startPrice
      * @param endPrice
+     * @return
      * @throws Exception
      */
-    void getExcel(Long id, String title, String catName, Long startPrice, Long endPrice) throws Exception;
+    @RequestMapping("/excelService/getExcel")
+    List<ItemBean> getExcel(
+            @RequestParam("id") Long id,
+            @RequestParam("title") String title,
+            @RequestParam("catName") String catName,
+            @RequestParam("startPrice") Long startPrice,
+            @RequestParam("endPrice") Long endPrice
+    ) throws Exception;
 }

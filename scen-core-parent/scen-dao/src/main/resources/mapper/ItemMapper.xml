@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scen.dao.ItemDao">
+    <select id="getSearchItemList" parameterType="java.util.Map" resultType="com.scen.vo.ItemBean">
+        SELECT
+        i.id,
+        i.title,
+        c.name as catName,
+        i.sellPoint as sellPoint,
+        i.price,
+        i.num,
+        i.barcode,
+        i.status,
+        IF(i.status=1,"正常","下架") as statusName,
+        i.created,
+        i.updated,
+        i.cid,
+        i.image
+        FROM
+        tb_item i LEFT JOIN tb_item_cat c on i.cid=c.id
+        WHERE
+        1 = 1
+        <!-- 检索条件 -->
+        <if test="id != null and id != ''">
+            and i.id = #{id}
+        </if>
+        <if test="title != null and title != ''">
+            and i.title like CONCAT(CONCAT('%', #{title}), '%')
+        </if>
+
+        <if test="catName != null and catName != ''">
+            and c.name like CONCAT(CONCAT('%', #{catName}), '%')
+        </if>
+
+        <if test="startPrice != null and startPrice != '' and endPrice == null or endPrice == ''">
+            AND i.price &gt;= #{startPrice}
+        </if>
+        <if test="endPrice != null and endPrice != '' and startPrice == null or startPrice == ''">
+            AND i.price &lt;= #{endPrice}
+        </if>
+        <if test="startPrice != null and startPrice != '' and endPrice != null and endPrice != ''">
+            AND i.price between #{startPrice} and #{endPrice}
+        </if>
+        ORDER BY price DESC
+
+    </select>
+</mapper>

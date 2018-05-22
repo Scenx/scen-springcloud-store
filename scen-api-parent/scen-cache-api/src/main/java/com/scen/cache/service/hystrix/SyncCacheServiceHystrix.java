@@ -1,7 +1,6 @@
 package com.scen.cache.service.hystrix;
 
 import com.scen.cache.service.SyncCacheService;
-import com.scen.vo.ScenResult;
 import org.springframework.stereotype.Component;
 
 /**

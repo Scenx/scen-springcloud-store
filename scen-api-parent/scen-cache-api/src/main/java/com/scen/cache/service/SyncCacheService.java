@@ -1,7 +1,6 @@
 package com.scen.cache.service;
 
 import com.scen.cache.service.hystrix.SyncCacheServiceHystrix;
-import com.scen.vo.ScenResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

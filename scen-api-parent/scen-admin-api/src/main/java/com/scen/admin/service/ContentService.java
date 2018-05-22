@@ -20,8 +20,8 @@ public interface ContentService {
     /**
      * 查询指定分类的所有内容
      *
-     * @param page 页数
-     * @param rows 行数
+     * @param page       页数
+     * @param rows       行数
      * @param categoryId 分类id
      * @return 内容信息
      */
@@ -36,8 +36,8 @@ public interface ContentService {
      * 保存内容
      *
      * @param content 内容对象
-     * @throws Exception 抛出异常回滚事务
      * @return 自定义响应结构
+     * @throws Exception 抛出异常回滚事务
      */
     @RequestMapping("/contentService/saveContent")
     ScenResult saveContent(
@@ -49,8 +49,8 @@ public interface ContentService {
      * 根据id批量删除内容
      *
      * @param ids 内容id数组
-     * @throws Exception 抛出异常回滚事务
      * @return 自定义响应结构
+     * @throws Exception 抛出异常回滚事务
      */
     @RequestMapping("/contentService/deleteContent")
     ScenResult deleteContent(
@@ -61,8 +61,8 @@ public interface ContentService {
      * 更新内容
      *
      * @param content 内容对象
-     * @throws Exception 抛出异常回滚事务
      * @return 自定义响应结构
+     * @throws Exception 抛出异常回滚事务
      */
     @RequestMapping("/contentService/editContent")
     ScenResult editContent(

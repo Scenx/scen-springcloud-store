@@ -1,14 +1,14 @@
 package com.scen.admin.controller;
 
-import com.scen.admin.service.ContentCategoryService;
-import com.scen.admin.service.ContentService;
-import com.scen.pojo.Content;
-import com.scen.pojo.ContentCategory;
-import com.scen.vo.EUDdataGridResult;
+import com.scen.admin.service.ExcelService;
+
+import com.scen.vo.ItemBean;
 import com.scen.vo.ScenResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author Scen
@@ -18,13 +18,11 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private ContentService contentService;
+    private ExcelService excelService;
 
     @RequestMapping("/test")
-    public ScenResult test() throws Exception {
-        Content content = new Content();
-        content.setId(1L);
-        content.setCategoryId(89L);
-        return contentService.saveContent(content);
+    public ScenResult test(Long id, String title, String catName, Long startPrice, Long endPrice) throws Exception {
+        List<ItemBean> list = excelService.getExcel(id, title, catName, startPrice, endPrice);
+        return ScenResult.ok(list);
     }
 }

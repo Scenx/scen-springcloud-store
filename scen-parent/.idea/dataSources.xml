@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="scen@localhost" uuid="253fa627-039d-4403-a73e-68e30bbbf71c">
+    <data-source source="LOCAL" name="scen@140.143.17.204" uuid="253fa627-039d-4403-a73e-68e30bbbf71c">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/scen</jdbc-url>
+      <jdbc-url>jdbc:mysql://140.143.17.204:3306/scen</jdbc-url>
       <driver-properties>
         <property name="autoReconnect" value="true" />
         <property name="zeroDateTimeBehavior" value="convertToNull" />
