@@ -1,8 +1,10 @@
 package com.scen.cache.service.impl;
 
 import com.scen.cache.service.SyncCacheService;
-import com.scen.vo.ScenResult;
+import org.springframework.amqp.rabbit.annotation.RabbitHandler;
+import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,13 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SyncCacheServiceImpl implements SyncCacheService {
 
+
+    @Value("${INDEX_CONTENT_REDIS_KEY}")
+    private String INDEX_CONTENT_REDIS_KEY;
     @Autowired
     private RedisTemplate<String, String> redisTemplate;
 
     @Override
-    public ScenResult syncContent(Long contentCid) {
-        redisTemplate.opsForValue().set("hahahhaha", "哈哈哈哈哈");
-        return ScenResult.ok();
+    @RabbitListener(queues = "syncContent")
+    @RabbitHandler
+    public void syncContent(Long contentCid) {
+        redisTemplate.opsForHash().delete(INDEX_CONTENT_REDIS_KEY, contentCid + "");
     }
 
 }

@@ -21,7 +21,7 @@ public interface SyncCacheService {
      * @return
      */
     @RequestMapping("/syncCacheService/syncContent")
-    ScenResult syncContent(
+    void syncContent(
             @RequestParam("contentCid") Long contentCid
     );
 }

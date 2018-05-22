@@ -63,7 +63,7 @@ public interface ContentCategoryService {
      * @param contentCategory 内容分类对象
      * @throws Exception 抛出异常回滚事务
      */
-    @RequestMapping(value = "/contentCategoryService/updateContentCategory", method = RequestMethod.POST)
+    @RequestMapping("/contentCategoryService/updateContentCategory")
     void updateContentCategory(
             ContentCategory contentCategory
     ) throws Exception;

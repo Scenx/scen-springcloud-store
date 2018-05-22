@@ -3,8 +3,6 @@ package com.scen.admin.service;
 import com.scen.admin.service.hystrix.ExcelServiceHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
 
-import javax.servlet.http.HttpServletResponse;
-
 /**
  * 生成报表接口
  *
@@ -16,7 +14,6 @@ public interface ExcelService {
     /**
      * 生成商品报表
      *
-     * @param response
      * @param id
      * @param title
      * @param catName

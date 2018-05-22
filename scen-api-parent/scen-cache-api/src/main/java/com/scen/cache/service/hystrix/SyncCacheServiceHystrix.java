@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class SyncCacheServiceHystrix implements SyncCacheService {
     @Override
-    public ScenResult syncContent(Long contentCid) {
-        return ScenResult.build(233, "服务不可用");
+    public void syncContent(Long contentCid) {
+
     }
 }
