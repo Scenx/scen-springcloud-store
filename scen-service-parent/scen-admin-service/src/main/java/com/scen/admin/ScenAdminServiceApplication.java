@@ -1,5 +1,6 @@
 package com.scen.admin;
 
+import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -14,6 +15,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @EnableEurekaClient
 @MapperScan(basePackages = "com.scen.dao")
+@EnableApolloConfig
 public class ScenAdminServiceApplication {
     public static void main(String[] args) {
         SpringApplication.run(ScenAdminServiceApplication.class, args);
