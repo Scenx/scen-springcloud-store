@@ -18,5 +18,11 @@
         <module>scen-apollo-client</module>
         <module>scen-cloud-registrycenter</module>
     </modules>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.ctrip.framework.apollo</groupId>
+            <artifactId>apollo-client</artifactId>
+            <version>0.10.2</version>
+        </dependency>
+    </dependencies>
 </project>

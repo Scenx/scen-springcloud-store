@@ -1,6 +1,7 @@
-package com.scen.admin.service;
+package com.scen.content.service;
 
-import com.scen.admin.service.hystrix.ContentServiceHystrix;
+
+import com.scen.content.service.hystrix.ContentServiceHystrix;
 import com.scen.pojo.Content;
 import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ScenResult;
@@ -14,7 +15,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author Scen
  * @date 2018/4/3 8:57
  */
-@FeignClient(value = "scen-admin-service", fallback = ContentServiceHystrix.class)
+@FeignClient(value = "scen-content-service", fallback = ContentServiceHystrix.class)
 public interface ContentService {
 
     /**

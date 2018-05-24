@@ -1,6 +1,6 @@
-package com.scen.admin.service;
+package com.scen.content.service;
 
-import com.scen.admin.service.hystrix.ContentCategoryServiceHystrix;
+import com.scen.content.service.hystrix.ContentCategoryServiceHystrix;
 import com.scen.pojo.ContentCategory;
 import com.scen.vo.EUTreeNode;
 import com.scen.vo.ScenResult;
@@ -16,7 +16,7 @@ import java.util.List;
  * @author Scen
  * @date 2018/4/2 15:12
  */
-@FeignClient(value = "scen-admin-service", fallback = ContentCategoryServiceHystrix.class)
+@FeignClient(value = "scen-content-service", fallback = ContentCategoryServiceHystrix.class)
 public interface ContentCategoryService {
     /**
      * 获取分类节点

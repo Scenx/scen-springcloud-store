@@ -1,8 +1,8 @@
-package com.scen.admin.service.impl;
+package com.scen.content.service.impl;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.scen.admin.service.ContentService;
+import com.scen.content.service.ContentService;
 import com.scen.dao.ContentDao;
 import com.scen.pojo.Content;
 import com.scen.vo.EUDdataGridResult;

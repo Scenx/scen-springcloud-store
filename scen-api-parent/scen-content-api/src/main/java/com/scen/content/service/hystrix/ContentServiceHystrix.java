@@ -1,6 +1,7 @@
-package com.scen.admin.service.hystrix;
+package com.scen.content.service.hystrix;
 
-import com.scen.admin.service.ContentService;
+
+import com.scen.content.service.ContentService;
 import com.scen.pojo.Content;
 import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ScenResult;

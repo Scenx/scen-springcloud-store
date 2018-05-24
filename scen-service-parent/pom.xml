@@ -21,6 +21,7 @@
         <module>scen-cache-service</module>
         <module>scen-sso-service</module>
         <module>scen-portal-service</module>
+        <module>scen-content-service</module>
     </modules>
 
     <dependencies>

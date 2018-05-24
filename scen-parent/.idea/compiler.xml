@@ -18,6 +18,8 @@
         <module name="scen-cloud-registrycenter" />
         <module name="scen-cloud-turbine" />
         <module name="scen-common" />
+        <module name="scen-content-api" />
+        <module name="scen-content-service" />
         <module name="scen-dao" />
         <module name="scen-item-api" />
         <module name="scen-item-service" />

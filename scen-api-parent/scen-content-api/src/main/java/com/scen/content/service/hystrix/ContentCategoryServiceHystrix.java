@@ -1,6 +1,7 @@
-package com.scen.admin.service.hystrix;
+package com.scen.content.service.hystrix;
 
-import com.scen.admin.service.ContentCategoryService;
+
+import com.scen.content.service.ContentCategoryService;
 import com.scen.pojo.ContentCategory;
 import com.scen.vo.EUTreeNode;
 import com.scen.vo.ScenResult;

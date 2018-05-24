@@ -1,7 +1,10 @@
 package com.scen.admin.controller;
 
+import com.scen.admin.service.AdminUserService;
+import com.scen.pojo.AdminUser;
 import com.scen.vo.ScenResult;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,9 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
+    @Autowired
+    private AdminUserService adminUserService;
 
     @RequestMapping("/test")
-    public ScenResult test(Long id, String title, String catName, Long startPrice, Long endPrice) throws Exception {
-        return ScenResult.ok();
+    public AdminUser test() throws Exception {
+        return adminUserService.getByUserName("admin");
     }
 }

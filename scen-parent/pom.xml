@@ -45,6 +45,8 @@
         <commons.net.version>3.6</commons.net.version>
         <!-- Jackson Json处理工具包 -->
         <jackson.version>2.9.5</jackson.version>
+        <!--时间组件-->
+        <joda-time.version>2.9.9</joda-time.version>
     </properties>
 
 
@@ -103,6 +105,12 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-databind</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+            <!-- 时间操作组件 -->
+            <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>${joda-time.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

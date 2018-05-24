@@ -5,6 +5,8 @@
     <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-admin-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-cache-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-cart-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-content-api" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-content-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-item-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-order-api" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-api-parent/scen-portal-api" charset="UTF-8" />
@@ -24,6 +26,7 @@
     <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-admin-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-cache-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-cart-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-content-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-item-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-order-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../scen-service-parent/scen-portal-service" charset="UTF-8" />

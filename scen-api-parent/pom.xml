@@ -21,6 +21,7 @@
         <module>scen-cache-api</module>
         <module>scen-sso-api</module>
         <module>scen-portal-api</module>
+        <module>scen-content-api</module>
     </modules>
     <dependencies>
         <dependency>
