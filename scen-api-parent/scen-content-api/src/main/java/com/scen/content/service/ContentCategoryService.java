@@ -33,7 +33,7 @@ public interface ContentCategoryService {
      * 添加分类节点
      *
      * @param parentId 父节点id
-     * @param name 节点名
+     * @param name     节点名
      * @return 自定义响应结构
      * @throws Exception 抛出异常回滚事务
      */

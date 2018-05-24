@@ -8,6 +8,7 @@ import java.util.List;
 
 /**
  * 商品分类熔断器
+ *
  * @author Scen
  * @date 2018/5/24 20:52
  */
