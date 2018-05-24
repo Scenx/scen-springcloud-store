@@ -16,7 +16,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 内容分类管理服务提供者
+ * 内容分类服务提供者
  *
  * @author Scen
  * @date 2018/5/12 8:51

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 /**
- * 内容分类管理接口
+ * 内容分类接口
  *
  * @author Scen
  * @date 2018/4/2 15:12

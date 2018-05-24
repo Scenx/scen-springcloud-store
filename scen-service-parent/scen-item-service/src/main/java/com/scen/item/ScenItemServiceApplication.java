@@ -1,4 +1,4 @@
-package com.scen.content;
+package com.scen.item;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
@@ -7,7 +7,7 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import tk.mybatis.spring.annotation.MapperScan;
 
 /**
- * 内容微服务提供者
+ * 商品微服务提供者
  *
  * @author Scen
  * @date 2018/4/28 10:41
@@ -16,8 +16,8 @@ import tk.mybatis.spring.annotation.MapperScan;
 @EnableEurekaClient
 @MapperScan(basePackages = "com.scen.dao")
 @EnableApolloConfig
-public class ScenContentServiceApplication {
+public class ScenItemServiceApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ScenContentServiceApplication.class, args);
+        SpringApplication.run(ScenItemServiceApplication.class, args);
     }
 }

@@ -8,7 +8,7 @@ import com.scen.vo.ScenResult;
 import org.springframework.stereotype.Component;
 
 /**
- * 内容管理熔断器
+ * 内容熔断器
  *
  * @author Scen
  * @date 2018/5/12 8:59

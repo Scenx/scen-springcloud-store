@@ -22,7 +22,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * 内容管理服务提供者
+ * 内容服务提供者
  *
  * @author Scen
  * @date 2018/5/12 8:59

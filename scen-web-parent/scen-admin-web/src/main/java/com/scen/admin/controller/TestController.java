@@ -1,12 +1,13 @@
 package com.scen.admin.controller;
 
 import com.scen.admin.service.AdminUserService;
-import com.scen.pojo.AdminUser;
-import com.scen.vo.ScenResult;
-
+import com.scen.item.service.ItemCatService;
+import com.scen.vo.EUTreeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 
 /**
@@ -17,10 +18,10 @@ import org.springframework.web.bind.annotation.RestController;
 public class TestController {
 
     @Autowired
-    private AdminUserService adminUserService;
+    private ItemCatService itemCatService;
 
     @RequestMapping("/test")
-    public AdminUser test() throws Exception {
-        return adminUserService.getByUserName("admin");
+    public List<EUTreeNode> test() throws Exception {
+        return itemCatService.getCatList(30L);
     }
 }

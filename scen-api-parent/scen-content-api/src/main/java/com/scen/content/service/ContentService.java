@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * 内容管理接口
+ * 内容接口
  *
  * @author Scen
  * @date 2018/4/3 8:57

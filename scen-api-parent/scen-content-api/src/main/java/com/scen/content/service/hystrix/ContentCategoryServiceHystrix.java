@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 /**
- * 内容分类管理熔断器
+ * 内容分类熔断器
  *
  * @author Scen
  * @date 2018/5/12 8:51
