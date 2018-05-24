@@ -1,6 +1,5 @@
 package com.scen.admin.controller;
 
-import com.scen.admin.service.AdminUserService;
 import com.scen.item.service.ItemCatService;
 import com.scen.vo.EUTreeNode;
 import org.springframework.beans.factory.annotation.Autowired;

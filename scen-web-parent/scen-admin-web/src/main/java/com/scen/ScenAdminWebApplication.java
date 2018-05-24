@@ -1,4 +1,4 @@
-package com.scen.admin;
+package com.scen;
 
 import com.ctrip.framework.apollo.spring.annotation.EnableApolloConfig;
 import org.springframework.boot.SpringApplication;
