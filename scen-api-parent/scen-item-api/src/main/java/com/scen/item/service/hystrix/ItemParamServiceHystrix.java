@@ -4,6 +4,7 @@ import com.scen.item.service.ItemParamService;
 import com.scen.pojo.ItemParam;
 import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ScenResult;
+import org.springframework.stereotype.Component;
 
 /**
  * 商品规格参数规则熔断器
@@ -11,6 +12,7 @@ import com.scen.vo.ScenResult;
  * @author Scen
  * @date 2018/5/12 9:39
  */
+@Component
 public class ItemParamServiceHystrix implements ItemParamService {
     @Override
     public ScenResult getItemParamByCid(Long cid) {
@@ -18,7 +20,7 @@ public class ItemParamServiceHystrix implements ItemParamService {
     }
 
     @Override
-    public ScenResult insertItemParam(ItemParam itemParam) {
+    public ScenResult insertItemParam(ItemParam itemParam) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 
@@ -28,12 +30,12 @@ public class ItemParamServiceHystrix implements ItemParamService {
     }
 
     @Override
-    public ScenResult updateItemParam(ItemParam itemParam) {
+    public ScenResult updateItemParam(ItemParam itemParam) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 
     @Override
-    public ScenResult deleteItemParam(Long[] ids) {
+    public ScenResult deleteItemParam(Long[] ids) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 }

@@ -1,7 +1,13 @@
 package com.scen.admin.controller;
 
 import com.scen.item.service.ItemCatService;
+import com.scen.item.service.ItemDescService;
+import com.scen.item.service.ItemParamItemService;
+import com.scen.item.service.ItemParamService;
+import com.scen.pojo.ItemParam;
+import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.EUTreeNode;
+import com.scen.vo.ScenResult;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -17,10 +23,10 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    private ItemCatService itemCatService;
+    private ItemParamService itemParamService;
 
     @RequestMapping("/test")
-    public List<EUTreeNode> test() throws Exception {
-        return itemCatService.getCatList(30L);
+    public ScenResult test() throws Exception {
+        return itemParamService.deleteItemParam(new Long[]{29L});
     }
 }

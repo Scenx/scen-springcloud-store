@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.scen.dao.ItemParamDao">
+    <select id="getItemParamList" parameterType="java.util.Map" resultType="com.scen.vo.ItemParamBean">
+        SELECT
+        p.id,
+        p.itemCatId as itemCatId,
+        c.name as catName,
+        p.paramData as paramData,
+        p.created,
+        p.updated
+        FROM
+        tb_item_param p LEFT JOIN tb_item_cat c on p.itemCatId=c.id
+        WHERE
+        1 = 1
+        <!-- 检索条件 -->
+        <if test="catName != null and catName != ''">
+            and c.name like CONCAT(CONCAT('%', #{catName}), '%')
+        </if>
+    </select>
+</mapper>

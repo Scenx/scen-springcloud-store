@@ -8,6 +8,8 @@ import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ScenResult;
 import com.scen.vo.SolrIf;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
@@ -25,7 +27,10 @@ public interface ItemService {
      * @param itemId
      * @return
      */
-    Item getItemById(Long itemId);
+    @RequestMapping("/itemService/getItemById")
+    Item getItemById(
+            @RequestParam Long itemId
+    );
 
 
     /**
@@ -40,7 +45,16 @@ public interface ItemService {
      * @param endPrice
      * @return
      */
-    EUDdataGridResult getItemList(Integer page, Integer rows, Long id, String title, String catName, Long startPrice, Long endPrice);
+    @RequestMapping("/itemService/getItemList")
+    EUDdataGridResult getItemList(
+            @RequestParam("page") Integer page,
+            @RequestParam("rows") Integer rows,
+            @RequestParam("id") Long id,
+            @RequestParam("title") String title,
+            @RequestParam("catName") String catName,
+            @RequestParam("startPrice") Long startPrice,
+            @RequestParam("endPrice") Long endPrice
+    );
 
 
     /**
@@ -52,7 +66,11 @@ public interface ItemService {
      * @return
      * @throws Exception
      */
-    ScenResult createItem(Item item, ItemDesc itemDesc, ItemParamItem itemParamItem);
+    @RequestMapping("/itemService/createItem")
+    ScenResult createItem(Item item,
+                          ItemDesc itemDesc,
+                          ItemParamItem itemParamItem
+    ) throws Exception;
 
 
     /**
@@ -65,15 +83,21 @@ public interface ItemService {
      * @return
      * @throws Exception
      */
-    ScenResult updateItem(Item item, ItemDesc itemDesc, Long itemParamId, String itemParams);
+    ScenResult updateItem(
+            Item item,
+            ItemDesc itemDesc,
+            @RequestParam("itemParamId") Long itemParamId,
+            @RequestParam("itemParams") String itemParams
+    ) throws Exception;
 
     /**
      * 根据id批量删除商品
      *
      * @param list
      * @return
+     * @throws Exception
      */
-    ScenResult deleteItem(List<SolrIf> list);
+    ScenResult deleteItem(List<SolrIf> list) throws Exception;
 
 
     /**
@@ -81,14 +105,16 @@ public interface ItemService {
      *
      * @param list
      * @return
+     * @throws Exception
      */
-    ScenResult instockItem(List<SolrIf> list);
+    ScenResult instockItem(List<SolrIf> list) throws Exception;
 
     /**
      * 根据id批量上架商品
      *
      * @param ids
      * @return
+     * @throws Exception
      */
-    ScenResult reshelfItem(Long[] ids);
+    ScenResult reshelfItem(Long[] ids) throws Exception;
 }

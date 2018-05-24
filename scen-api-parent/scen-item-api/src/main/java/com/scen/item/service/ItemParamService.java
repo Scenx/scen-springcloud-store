@@ -6,6 +6,8 @@ import com.scen.pojo.ItemParam;
 import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ScenResult;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
  * 商品规格参数规则接口
@@ -16,20 +18,25 @@ import org.springframework.cloud.openfeign.FeignClient;
 @FeignClient(value = "scen-item-service", fallback = ItemParamServiceHystrix.class)
 public interface ItemParamService {
     /**
-     * 根据查询对应商品规格
+     * 根据cid查询对应商品规格
      *
      * @param cid
      * @return
      */
-    ScenResult getItemParamByCid(Long cid);
+    @RequestMapping("/itemParamService/getItemParamByCid")
+    ScenResult getItemParamByCid(
+            @RequestParam("cid") Long cid
+    );
 
     /**
      * 添加商品规格参数
      *
      * @param itemParam
      * @return
+     * @throws Exception
      */
-    ScenResult insertItemParam(ItemParam itemParam);
+    @RequestMapping("/itemParamService/insertItemParam")
+    ScenResult insertItemParam(ItemParam itemParam) throws Exception;
 
     /**
      * 查询所有规格
@@ -39,21 +46,30 @@ public interface ItemParamService {
      * @param catName
      * @return
      */
-    EUDdataGridResult getItemParamList(Integer page, Integer rows, String catName);
+    @RequestMapping("/itemParamService/getItemParamList")
+    EUDdataGridResult getItemParamList(
+            @RequestParam("page") Integer page,
+            @RequestParam("rows") Integer rows,
+            @RequestParam("catName") String catName
+    );
 
     /**
      * 修改指定类目的规格
      *
      * @param itemParam
      * @return
+     * @throws Exception
      */
-    ScenResult updateItemParam(ItemParam itemParam);
+    @RequestMapping("/itemParamService/updateItemParam")
+    ScenResult updateItemParam(ItemParam itemParam) throws Exception;
 
     /**
      * 根据id批量删除商品类目规格
      *
      * @param ids
      * @return
+     * @throws Exception
      */
-    ScenResult deleteItemParam(Long[] ids);
+    @RequestMapping("/itemParamService/deleteItemParam")
+    ScenResult deleteItemParam(Long[] ids) throws Exception;
 }

@@ -78,6 +78,7 @@ public class ContentServiceImpl implements ContentService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ScenResult deleteContent(@RequestBody Long[] ids) throws Exception {
         for (Long id : ids) {
             Content content = contentDao.selectByPrimaryKey(id);
@@ -89,6 +90,7 @@ public class ContentServiceImpl implements ContentService {
     }
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public ScenResult editContent(@RequestBody Content content) {
         content.setUpdated(new Date());
         contentDao.updateByPrimaryKeySelective(content);

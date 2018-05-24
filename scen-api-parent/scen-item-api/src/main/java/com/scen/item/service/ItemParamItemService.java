@@ -4,9 +4,11 @@ package com.scen.item.service;
 import com.scen.item.service.hystrix.ItemParamItemServiceHystrix;
 import com.scen.vo.ScenResult;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * 商品具体规格参数业务层接口
+ * 商品具体规格参数接口
  *
  * @author Scen
  * @date 2018/3/22 13:40
@@ -19,5 +21,8 @@ public interface ItemParamItemService {
      * @param itemId
      * @return
      */
-    ScenResult getItemParamByItemId(Long itemId);
+    @RequestMapping("/itemParamItemService/getItemParamByItemId")
+    ScenResult getItemParamByItemId(
+            @RequestParam("itemId") Long itemId
+    );
 }

@@ -2,6 +2,7 @@ package com.scen.item.service.hystrix;
 
 import com.scen.item.service.ItemDescService;
 import com.scen.vo.ScenResult;
+import org.springframework.stereotype.Component;
 
 /**
  * 商品描述/详情熔断器
@@ -9,6 +10,7 @@ import com.scen.vo.ScenResult;
  * @author Scen
  * @date 2018/5/12 9:17
  */
+@Component
 public class ItemDescServiceHystrix implements ItemDescService {
     @Override
     public ScenResult getItemDesc(Long itemId) {
