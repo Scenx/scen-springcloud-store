@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta name="renderer" content="webkit"/>
+    <meta charset="utf-8"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no"/>
+    <title>Scen商城后台管理系统</title>
+    <link th:href="@{/css/H-ui.reset.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/H-ui.min.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/helpLoan.css}" rel="stylesheet" type="text/css">
+    <script th:src="@{/js/jquery/jquery-2.1.4.min.js}"></script>
+    <script th:src="@{/js/prng4.js}"></script>
+    <script th:src="@{/js/jsbn.js}"></script>
+    <script th:src="@{/js/rng.js}"></script>
+    <script th:src="@{/js/base64.js}"></script>
+    <script th:src="@{/js/rsa.js}"></script>
+    <script th:src="@{/layer/layer-v2.1.js}"></script>
+    <style type="text/css">
+        .login-list label {
+            position: absolute;
+            left: 20px;
+            bottom: -20px;
+            font-size: 12px;
+            color: #f60;
+        }
+    </style>
+</head>
+<body>
+<div class="loginBg">
+    <div class="loginBox">
+        <h4>Scen商城后台管理系统</h4>
+        <div class="login-content">
+            <form method="post" id="login_form" th:action="@{/adminLogin}">
+                <ul class="login-list">
+                    <li>
+                        <input class="input-text radius" id="username" name="userName" value="" placeholder="用户名"
+                               type="text"/>
+                    </li>
+                    <li>
+                        <input class="input-text radius" id="password" name="password" value="" placeholder="密码"
+                               type="password"/>
+                    </li>
+                    <li class="imgCode-login">
+                        <input class="input-text radius yanzheng-code" id="captcha" name="captcha" placeholder="验证码"
+                               type="text"/>
+                        <span class="yanzheng-codeImg"><img th:src="@{/drawCheckCode}"
+                                                            onclick="reCheckcode(this)"></span>
+                    </li>
+                    <li>
+                        <button class="btn btn-secondary radius login-btn" id="submitBtn">登录</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<script th:src="@{/js/jquery.validate.js}"></script>
+<script th:src="@{/js/jquery.cms.validate.js}"></script>
+
+<script type="text/javascript">
+    function reCheckcode(img) {
+        img.src = "drawCheckCode?" + Math.random();
+    }
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var submit = $("#submitBtn");
+        var loginForm = $("#login_form");
+        var password = $("#password");
+
+        loginForm.validate({
+            rules: {
+                username: "required",
+                password: {
+                    required: true,
+                    minlength: 6
+                },
+                captcha: "required"
+            },
+            messages: {
+                username: "请输入用户名",
+                password: {
+                    required: "请输入密码",
+                    minlength: jQuery.format("密码不能小于{0}个字符")
+                },
+                captcha: "请输入图形验证码"
+            },
+            errorClass: "invalid",
+            submitHandler: function (form) {
+                $.ajax({
+                    url: loginForm.attr("action"),
+                    type: "POST",
+                    data: {
+                        userName: $("#username").val(),
+                        password: $("#password").val(),
+                        captcha: $("#captcha").val()
+                    },
+                    dataType: "json",
+                    cache: false,
+                    success: function (message) {
+                        submit.prop("disabled", false);
+                        if (message.status == 200) {
+                            location.href = "<%=path %>/index";
+                        } else {
+                            if (message.data == "验证码错误") {
+                                $("#captcha").val("");
+                                layer.msg(message.data);
+                            } else if (message.data == "认证失败") {
+                                $("#username").val("");
+                                $("#password").val("");
+                                layer.msg(message.data);
+                            } else {
+                                layer.msg("账号被停用");
+                            }
+
+                        }
+                    },
+                    error: function (XMLHttpRequest, textStatus, errorThrown) {
+                        //$("#login-info").text($("#login-info").text() + "3." + XMLHttpRequest.status+ "   " + XMLHttpRequest.readyState + "  " + textStatus);
+                    }
+                });
+            }
+        });
+    });
+</script>
+</body>

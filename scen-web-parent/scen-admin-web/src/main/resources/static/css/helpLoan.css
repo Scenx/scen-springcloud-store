@@ -1,0 +1,933 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #f1f1f1;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    border: none;
+    outline: none;
+    background: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+
+/*鐧诲綍*/
+.loginBg {
+    background: url(../img/loginBg.jpg) no-repeat;
+    width: 100%;
+    min-height: 100%;
+    background-size: 100% 100%;
+}
+
+.loginBox {
+    width: 380px;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -190px;
+    top: 50%;
+    margin-top: -220px;
+}
+
+.loginBox h4 {
+    text-align: center;
+    color: #fff;
+    font-size: 30px;
+    margin-bottom: 35px;
+}
+
+.login-content {
+    background: #edf1f2;
+    width: 100%;
+    border-radius: 5px;
+    padding: 30px 0;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, .1);
+}
+
+.login-list li {
+    padding: 0 20px;
+    margin-bottom: 25px;
+    display: inline-table;
+    zoom: 1;
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.login-errorTip {
+    position: absolute;
+    left: 22px;
+    bottom: -22px;
+    color: #f30;
+}
+
+.login-list input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.login-list .yanzheng-code {
+    width: 48%;
+    float: left;
+}
+
+.yanzheng-codeImg {
+    width: 48%;
+    float: right;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 5px;
+    height: 38px;
+}
+
+.yanzheng-codeImg img {
+    width: 100%;
+    height: 36px;
+    border-radius: 5px;
+}
+
+.login-btn {
+    padding: 0 30px;
+    width: 100%;
+    height: 38px;
+}
+
+/*棣栭〉*/
+.helpLoan-header {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+    background: #fff;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .05);
+    height: 54px;
+}
+
+.helpLoan-logo {
+    text-align: center;
+    width: 200px;
+    float: left;
+    background: #24bfa9;
+    height: 54px;
+    line-height: 54px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.headerSearch-form {
+    width: 50%;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    margin-left: -25%;
+    top: 10px;
+}
+
+.headerSearch {
+    position: relative
+}
+
+.headerSearch input {
+    font-size: 12px;
+    padding-left: 15px;
+}
+
+.headerSearch input:hover {
+    border: 1px solid #ddd;
+}
+
+.headerSearch i {
+    font-size: 18px;
+    color: #5cb732;
+    line-height: 32px;
+}
+
+.headerSearch a {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+.helpLoan-Login {
+    float: right;
+    padding: 10px 20px;
+}
+
+.helpLoan-Login span {
+    line-height: 32px;
+    color: #999;
+    padding: 0 15px;
+}
+
+.helpLoan-Login a {
+    color: #333;
+    font-size: 14px;
+}
+
+.helpLoan-Login i {
+    margin-right: 5px;
+}
+
+.login-name {
+    font-size: 16px;
+    line-height: 32px;
+    display: inline-block;
+}
+
+.leftItem {
+    width: 200px;
+    position: fixed;
+    top: 54px;
+    left: 0;
+    background: #323232;
+    box-sizing: border-box;
+    height: 100%;
+    padding-top: 20px;
+}
+
+.leftList:first-child {
+    border-top: 1px solid #4a4a4a;
+}
+
+.leftList {
+    margin-left: -1px;
+    padding: 0;
+    background: none;
+    border-bottom: 1px solid rgba(107, 108, 109, .22);
+    float: none;
+    display: block;
+    line-height: 40px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.leftList-link.current {
+    background: #131212;
+    color: #24bfa9;
+}
+
+.leftList a {
+    padding-left: 45px;
+    display: block;
+    color: #eee;
+}
+
+.leftList i {
+    font-size: 18px;
+    margin-right: 10px;
+    position: relative;
+    top: 2px;
+}
+
+.up-down {
+    background: #1b1b1b;
+    margin-left: 1px;
+    display: none;
+}
+
+.up-down li {
+    border-bottom: 1px solid rgba(107, 108, 109, .22);
+}
+
+.up-down li a {
+    padding-left: 75px;
+}
+
+.up-down li:last-child {
+    border-bottom: none;
+}
+
+.helpLoan-main {
+    margin-top: 54px;
+}
+
+.helpLoan-content {
+    margin-left: 200px;
+    padding: 20px 90px;
+}
+
+.pop-contentPage {
+    margin-left: 0px;
+}
+
+.whole-data {
+    padding-top: 10px;
+}
+
+.whole-data ul {
+    overflow: hidden;
+    width: 100%;
+}
+
+.whole-data li {
+    width: 22%;
+    margin-right: 4%;
+    background: #fff;
+    border-radius: 5px;
+    float: left;
+    display: inline-table;
+    zoom: 1;
+    padding: 20px 0;
+}
+
+.wholeImg {
+    float: left;
+    width: 46%;
+    border-right: 1px solid #eaeaea;
+    text-align: center;
+}
+
+.wholeImg-box {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+}
+
+.wholeImg img {
+    width: 100%;
+    border-radius: 50%;
+}
+
+.wholeImg p {
+    text-align: center;
+    font-size: 16px;
+    padding-top: 5px;
+}
+
+.whole-user p {
+    color: #ff7856;
+}
+
+.whole-manager p {
+    color: #30a5ff;
+}
+
+.whole-order p {
+    color: #16bd9b;
+}
+
+.whole-product p {
+    color: #ffbb2a;
+}
+
+.wholeText {
+    margin-left: 46%;
+    text-align: center;
+}
+
+.wholeText h6 {
+    font-size: 32px;
+    padding-top: 8px;
+    font-weight: normal;
+}
+
+.wholeText span {
+    font-size: 14px;
+    margin-left: 3px;
+    color: #666;
+}
+
+.wholeText p {
+    padding-top: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+.whole-data li:last-child {
+    margin: 0;
+}
+
+.orderTable {
+    background: #fff;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+.orderTable-titleItem {
+    zoom: 1;
+    display: inline-table;
+    width: 100%;
+}
+
+.orderTable-titleItem h4 {
+    float: left;
+}
+
+.orderTable-title {
+    position: relative;
+    float: right;
+}
+
+.orderTable-titleIcon {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 14px;
+}
+
+.orderTable-title .dropDown_A {
+    font-size: 14px;
+    color: #999;
+    line-height: 40px;
+    padding: 0 30px 0 20px;
+    box-sizing: border-box;
+}
+
+.dropDown.open > .dropDown-menu {
+    left: 0;
+    box-sizing: border-box;
+}
+
+.orderTable-titleList {
+    display: none;
+    border: 1px solid #eaeaea;
+    border-bottom: none;
+    position: absolute;
+    left: 0;
+    top: 42px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 999;
+    background: #fff;
+}
+
+.orderTable-titleList li {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.orderTable-titleList a {
+    font-size: 14px;
+    padding: 5px 0 5px 20px;
+    display: block;
+}
+
+.order-tableBox {
+    text-align: center;
+}
+
+#order-tableBox, #week-tableBox, #month-tableBox {
+    width: 100%;
+    height: 320px;
+}
+
+.order-todayBox {
+    display: inline-block;
+    padding-bottom: 15px;
+}
+
+.order-todayBox p {
+    display: inline-block;
+    text-align: center;
+    font-size: 18px;
+}
+
+.order-todayBox p:first-child {
+    margin-right: 20px;
+}
+
+.order-todayBox span {
+    display: block;
+    font-size: 12px;
+    color: #999;
+}
+
+.helpLoan-dataBox {
+    width: 32%;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+}
+
+.helpLoan-dataList {
+    height: 120px;
+    position: relative;
+    box-sizing: border-box;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f2f2f2;
+}
+
+.helpLoan-dataTitle {
+    padding: 15px 20px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.helpLoan-dataLabel {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+}
+
+.helpLoan-dataLabel p {
+    margin-right: 10px;
+    display: inline-block;
+    font-size: 12px;
+    color: #999;
+}
+
+.managerToday-label {
+    background: #4ecbe7;
+}
+
+/*鏁版嵁*/
+.user-dataBox {
+    display: inline-table;
+    zoom: 1;
+    width: 100%;
+}
+
+.user-total {
+    font-size: 18px;
+    text-align: center;
+    float: left;
+    font-weight: bold;
+    padding: 51px 0;
+    width: 25%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.user-total span {
+    display: block;
+    font-size: 12px;
+    color: #999;
+    font-weight: normal;
+}
+
+.user-table {
+    height: 120px;
+    width: 74%;
+    margin: 0px 1% 0 25%
+}
+
+.helpLoan-data {
+    width: 100%;
+    margin-top: 30px;
+    display: inline-table;
+    zoom: 1;
+}
+
+.average-productBox {
+    width: 100%;
+    padding-bottom: 13px;
+    overflow: hidden;
+}
+
+#average-product {
+    width: 95%;
+    margin: 0px auto 0;
+    height: 180px;
+}
+
+.average-time {
+    width: 100%;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.average-timeList {
+    width: 32%;
+    background: #fff;
+    border-radius: 5px;
+    float: left;
+    display: inline-table;
+    zoom: 1;
+    margin-right: 2%;
+    padding: 15px 1%;
+    box-sizing: border-box;
+}
+
+.average-timeList:last-child {
+    margin-right: 0;
+}
+
+.deal-timeBox {
+    padding: 0 22px;
+    margin-top: 20px;
+}
+
+.deal-timeBox li {
+    display: inline-table;
+    zoom: 1;
+    width: 100%;
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.deal-timeBox label {
+    float: left;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    line-height: 6px;
+    width: 90px;
+}
+
+.deal-timeBg {
+    height: 6px;
+    box-sizing: border-box;
+    border-radius: 15px;
+    margin-left: 110px;
+}
+
+.deal-timeBox span {
+    display: block;
+    height: 6px;
+    background: #24bfa9;
+    border-radius: 15px;
+    float: left;
+}
+
+.deal-timeBox i {
+    color: #24bfa9;
+}
+
+.response-timeBox span {
+    background: #ff7856;
+}
+
+.response-timeBox i {
+    color: #ff7856;
+}
+
+.apply-productBox span {
+    background: #6495e3;
+}
+
+.apply-productBox i {
+    color: #6495e3;
+}
+
+.deal-timeBox i {
+    line-height: 6px;
+    font-style: normal;
+    font-size: 14px;
+    position: absolute;
+    width: 10%;
+    text-align: center;
+    display: inline-block;
+}
+
+.helpLoan-complainBox {
+    background: #fff;
+    height: 360px;
+    margin-left: 34%;
+    border-radius: 5px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.helpLoan-complainTable {
+    width: 95%;
+    margin: 0 auto;
+    height: 300px;
+}
+
+/*鎶曡瘔*/
+.compalin-dataBox {
+    padding: 20px 0;
+}
+
+.compalin-dataBox ul {
+    overflow: hidden;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.compalin-dataBox li {
+    width: 46%;
+    float: left;
+    background: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    background: #4fc2b9;
+    color: #fff;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.compalin-dataBox li:first-child {
+    margin-right: 8%;
+    background: #5bb4d8;
+}
+
+.compalin-dataBox h6 {
+    font-size: 28px;
+    padding-left: 20px;
+}
+
+.compalin-dataBox p {
+    padding: 10px 0 0 20px;
+    color: #b2d9ea;
+    font-size: 14px;
+}
+
+.compalin-dataImg {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    width: 70px;
+}
+
+.compalin-dataImg img {
+    width: 100%;
+}
+
+.complain-form {
+    background: #fff;
+}
+
+.complain-formBox {
+    margin-top: 20px;
+}
+
+.complain-tableSearch {
+    width: 100%;
+    box-sizing: border-box;
+    background: #f9f9f9;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-bottom: none;
+}
+
+.complain-tableSearch p {
+    float: left;
+    padding-left: 25px;
+    color: #333;
+    line-height: 52px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.complain-tableInput {
+    padding: 10px 30px;
+    width: 11%;
+    position: relative;
+    float: right;
+}
+
+.pop-layerInput {
+    width: 150px
+}
+
+.complain-tableInput input, .complain-tableInput select {
+    background: #fff;
+    height: 30px;
+    border-radius: 5px;
+    padding-left: 10px;
+    width: 100%;
+    color: #666;
+    border: 1px solid #e6e6e6;
+}
+
+.complain-tableInput a {
+    position: absolute;
+    right: 45px;
+    top: 10px;
+    height: 32px;
+}
+
+.complain-tableInput i {
+    font-size: 16px;
+    color: #5cb732;
+    line-height: 30px;
+}
+
+.complain-tableCheck {
+    color: #4BBAFF;
+}
+
+.complain-form th {
+    color: #666;
+    text-align: center;
+    font-size: 15px;
+}
+
+.complain-form td {
+    color: #999;
+    text-align: center;
+    font-size: 14px;
+}
+
+.complain-tableBtn {
+    font-size: 12px;
+    padding: 4px 8px;
+    height: auto;
+}
+
+.stop-accountUser {
+    padding-top: 80px;
+}
+
+.stop-accountDialog {
+    width: 300px;
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    margin-left: -150px;
+}
+
+.stop-accountDialog .modal-header {
+    padding: 5px 15px;
+}
+
+.modal-header .close {
+    top: 8px;
+}
+
+.click-selectName {
+    height: 34px;
+    width: 50%;
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    box-sizing: border-box
+}
+
+#imgbtn {
+    height: 34px;
+}
+
+/*灏佸仠璐﹀彿*/
+.suspend-item {
+    border-bottom: 1px solid #ddd;
+    overflow: hidden;
+}
+
+.suspend-item li {
+    float: left;
+}
+
+.suspend-item a {
+    font-size: 14px;
+    padding: 10px 20px;
+    display: block;
+}
+
+.suspend-item a:hover {
+    color: #333;
+}
+
+.suspend-item a.active {
+    color: #24bfa9;
+    border-bottom: 2px solid #24bfa9;
+}
+
+.suspend-list {
+    padding-top: 20px;
+    display: none;
+}
+
+.examine .btn {
+    margin: 10px 0
+}
+
+/*绠＄悊鍛樼鐞�/
+.administrator-input{float: left;}
+.addBtn-Box {text-align: left;float: right;height: 28px;padding: 12px 25px 12px 0;}
+.examine{margin: 20px 0 0 5px;overflow: hidden;}
+.examine .btn-success{float:left;}
+.help-pageBox{float:right;}
+.complain-tableInput .select-box{margin-right: 60px;padding: 0;height: 32px;display: block;width: auto;}
+.verify-search{width: auto;}
+.verify-search input{float: left;width: auto;width: 150px;}
+.verify-search .select-box{float: left;margin-left: 10px;width: 150px;border: 1px solid #e6e6e6;border-radius: 5px;}
+.complain-tableInput select{height: 30px;border-radius: 5px;color: #999;}
+.verify-search button{position: absolute;right: 35px;top: 10px;}
+/*鍒嗛〉宸ュ叿鏍峰紡*/
+.help-pageBox {
+    float: right;
+}
+
+.layui-laypage .layui-laypage-skip {
+    background: none;
+}
+
+.layui-laypage .layui-laypage-curr .layui-laypage-em {
+    background-color: #24bfa9;
+}
+
+.layui-laypage .layui-laypage-count {
+    padding: 0 15px !important;
+}
+
+.layui-laypage a {
+    margin-right: 10px;
+}
+
+/*鏌ョ湅璇︽儏椤�/
+.check-infoNav{padding: 15px 0 15px 25px;background: #fff;border-bottom: 1px solid #f1f1f1;}
+.check-infoNav p{font-size: 14px;color: #666;}
+.check-infoNav span{font-size: 14px;color: #24bfa9;}
+.check-infoTable{padding:60px 80px 120px;background: #fff;}
+.check-infoTable table{background: #fff;}
+.check-infoTable th{font-size: 15px;padding:10px 15px;color: #333;}
+.check-infoTable td{font-size: 14px;color: #666;padding-left: 15px;}
+/*娣诲姞*/
+.add-content {
+    background: #fff;
+}
+
+.add-formBox {
+    padding: 60px 0;
+    background: #fff;
+}
+
+.add-formBox .add-formList {
+    margin: 0 0 25px 0;
+}
+
+.add-formList .form-label {
+    margin: 0;
+    line-height: 34px;
+    padding: 0;
+}
+
+.add-formList span {
+    color: #f30;
+    font-weight: bold;
+}
+
+.addInput {
+    margin-right: 5px;
+    border: 1px solid #ddd;
+    height: 34px;
+    box-sizing: border-box;
+    background: #fff;
+    padding-left: 10px;
+    width: 50%;
+}
+
+.verify-fail {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ddd;
+    min-height: 80px;
+}
+
+.addSelect {
+    width: 50%;
+}
