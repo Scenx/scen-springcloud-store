@@ -47,6 +47,8 @@
         <jackson.version>2.9.5</jackson.version>
         <!--时间组件-->
         <joda-time.version>2.9.9</joda-time.version>
+        <!--shiro权限控制-->
+        <shiro.version>1.4.0</shiro.version>
     </properties>
 
 
@@ -111,6 +113,21 @@
                 <groupId>joda-time</groupId>
                 <artifactId>joda-time</artifactId>
                 <version>${joda-time.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-core</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-web</artifactId>
+                <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.apache.shiro</groupId>
+                <artifactId>shiro-spring</artifactId>
+                <version>${shiro.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

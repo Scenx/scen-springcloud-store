@@ -2,6 +2,7 @@ package com.scen.admin.service;
 
 import com.scen.admin.service.hystrix.PictureServiceHystrix;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.Map;
@@ -20,5 +21,6 @@ public interface PictureService {
      * @param uploadFile
      * @return
      */
+    @RequestMapping("pictureService/uploadPicture")
     Map uploadPicture(MultipartFile uploadFile);
 }
