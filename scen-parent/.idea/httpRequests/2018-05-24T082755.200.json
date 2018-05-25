@@ -1,0 +1,47 @@
+[
+  {
+    "id": 31,
+    "text": "历史",
+    "state": "open"
+  },
+  {
+    "id": 32,
+    "text": "哲学",
+    "state": "open"
+  },
+  {
+    "id": 33,
+    "text": "国学",
+    "state": "open"
+  },
+  {
+    "id": 34,
+    "text": "政治/军事",
+    "state": "open"
+  },
+  {
+    "id": 35,
+    "text": "法律",
+    "state": "open"
+  },
+  {
+    "id": 36,
+    "text": "宗教",
+    "state": "open"
+  },
+  {
+    "id": 37,
+    "text": "心理学",
+    "state": "open"
+  },
+  {
+    "id": 38,
+    "text": "文化",
+    "state": "open"
+  },
+  {
+    "id": 39,
+    "text": "社会科学",
+    "state": "open"
+  }
+]

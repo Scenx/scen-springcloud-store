@@ -1,5 +1,6 @@
 package com.scen.item.service.impl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.scen.common.utils.IDUtils;
@@ -46,6 +47,10 @@ public class ItemServiceImpl implements ItemService {
 
     @Autowired
     private ItemParamItemDao itemParamItemDao;
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
 
     @Autowired
     private RabbitTemplate rabbitTemplate;
@@ -103,11 +108,10 @@ public class ItemServiceImpl implements ItemService {
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public ScenResult createItem(
-            @RequestBody Item item,
-            @RequestBody ItemDesc itemDesc,
-            @RequestBody ItemParamItem itemParamItem
-    ) throws Exception {
+    public ScenResult createItem(@RequestBody Map<String, Object> itemMap) throws Exception {
+        Item item = objectMapper.convertValue(itemMap.get("item"), Item.class);
+        ItemDesc itemDesc = objectMapper.convertValue(itemMap.get("itemDesc"), ItemDesc.class);
+        ItemParamItem itemParamItem = objectMapper.convertValue(itemMap.get("itemParamItem"), ItemParamItem.class);
 //        补全item
 //        生成商品ID
         long itemId = IDUtils.genItemId();
@@ -139,11 +143,12 @@ public class ItemServiceImpl implements ItemService {
     @Override
     @Transactional(rollbackFor = Exception.class)
     public ScenResult updateItem(
-            @RequestBody Item item,
-            @RequestBody ItemDesc itemDesc,
+            @RequestBody Map<String, Object> itemMap,
             Long itemParamId,
             String itemParams
     ) throws Exception {
+        Item item = objectMapper.convertValue(itemMap.get("item"), Item.class);
+        ItemDesc itemDesc = objectMapper.convertValue(itemMap.get("itemDesc"), ItemDesc.class);
         item.setUpdated(new Date());
         itemDao.updateByPrimaryKey(item);
         ScenResult result = updateItemDesc(item.getId(), itemDesc);

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 /**
- * 缓存同步接口
+ * 内容同步接口
  *
  * @author Scen
  * @date 2018/5/18 14:27

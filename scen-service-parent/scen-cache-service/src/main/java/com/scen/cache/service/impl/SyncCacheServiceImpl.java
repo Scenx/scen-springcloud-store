@@ -9,7 +9,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 缓存同步服务提供者
+ * 内容同步服务提供者
  *
  * @author Scen
  * @date 2018/5/18 14:28

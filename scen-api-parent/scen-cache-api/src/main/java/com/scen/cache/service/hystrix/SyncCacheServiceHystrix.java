@@ -4,7 +4,7 @@ import com.scen.cache.service.SyncCacheService;
 import org.springframework.stereotype.Component;
 
 /**
- * 缓存同步熔断器
+ * 内容同步熔断器
  *
  * @author Scen
  * @date 2018/5/18 14:28

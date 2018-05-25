@@ -1,18 +1,22 @@
 package com.scen.admin.controller;
 
-import com.scen.item.service.ItemCatService;
-import com.scen.item.service.ItemDescService;
-import com.scen.item.service.ItemParamItemService;
-import com.scen.item.service.ItemParamService;
+import com.scen.item.service.*;
+import com.scen.pojo.Item;
+import com.scen.pojo.ItemDesc;
 import com.scen.pojo.ItemParam;
+import com.scen.pojo.ItemParamItem;
 import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.EUTreeNode;
 import com.scen.vo.ScenResult;
+import com.scen.vo.SolrIf;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 /**
@@ -23,10 +27,15 @@ import java.util.List;
 public class TestController {
 
     @Autowired
-    private ItemParamService itemParamService;
+    private ItemService itemService;
 
     @RequestMapping("/test")
     public ScenResult test() throws Exception {
-        return itemParamService.deleteItemParam(new Long[]{29L});
+        List<SolrIf> list = new ArrayList<>();
+        SolrIf solrIf = new SolrIf();
+        solrIf.setId(152724575381884L);
+        solrIf.setStatus(1);
+        list.add(solrIf);
+        return itemService.deleteItem(list);
     }
 }

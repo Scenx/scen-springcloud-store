@@ -10,6 +10,7 @@ import com.scen.vo.SolrIf;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 商品熔断器
@@ -31,12 +32,12 @@ public class ItemServiceHystrix implements ItemService {
     }
 
     @Override
-    public ScenResult createItem(Item item, ItemDesc itemDesc, ItemParamItem itemParamItem) throws Exception {
+    public ScenResult createItem(Map<String, Object> itemMap) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 
     @Override
-    public ScenResult updateItem(Item item, ItemDesc itemDesc, Long itemParamId, String itemParams) throws Exception {
+    public ScenResult updateItem(Map<String, Object> itemMap, Long itemParamId, String itemParams) throws Exception {
         return ScenResult.build(233, "服务不可用");
     }
 

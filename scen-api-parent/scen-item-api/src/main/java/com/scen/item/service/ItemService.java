@@ -2,8 +2,6 @@ package com.scen.item.service;
 
 import com.scen.item.service.hystrix.ItemServiceHystrix;
 import com.scen.pojo.Item;
-import com.scen.pojo.ItemDesc;
-import com.scen.pojo.ItemParamItem;
 import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ScenResult;
 import com.scen.vo.SolrIf;
@@ -12,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * 商品接口
@@ -29,7 +28,7 @@ public interface ItemService {
      */
     @RequestMapping("/itemService/getItemById")
     Item getItemById(
-            @RequestParam Long itemId
+            @RequestParam("itemId") Long itemId
     );
 
 
@@ -59,33 +58,25 @@ public interface ItemService {
 
     /**
      * 保存商品
-     *
-     * @param item
-     * @param itemDesc
-     * @param itemParamItem
+     * @param itemMap
      * @return
      * @throws Exception
      */
     @RequestMapping("/itemService/createItem")
-    ScenResult createItem(Item item,
-                          ItemDesc itemDesc,
-                          ItemParamItem itemParamItem
-    ) throws Exception;
+    ScenResult createItem(Map<String, Object> itemMap) throws Exception;
 
 
     /**
      * 更新商品
-     *
-     * @param item
-     * @param itemDesc
+     * @param itemMap
      * @param itemParamId
      * @param itemParams
      * @return
      * @throws Exception
      */
+    @RequestMapping("/itemService/updateItem")
     ScenResult updateItem(
-            Item item,
-            ItemDesc itemDesc,
+            Map<String, Object> itemMap,
             @RequestParam("itemParamId") Long itemParamId,
             @RequestParam("itemParams") String itemParams
     ) throws Exception;
@@ -97,6 +88,7 @@ public interface ItemService {
      * @return
      * @throws Exception
      */
+    @RequestMapping("/itemService/deleteItem")
     ScenResult deleteItem(List<SolrIf> list) throws Exception;
 
 
@@ -107,6 +99,7 @@ public interface ItemService {
      * @return
      * @throws Exception
      */
+    @RequestMapping("/itemService/instockItem")
     ScenResult instockItem(List<SolrIf> list) throws Exception;
 
     /**
@@ -116,5 +109,6 @@ public interface ItemService {
      * @return
      * @throws Exception
      */
+    @RequestMapping("/itemService/reshelfItem")
     ScenResult reshelfItem(Long[] ids) throws Exception;
 }
