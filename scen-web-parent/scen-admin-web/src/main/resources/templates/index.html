@@ -64,7 +64,7 @@
         img.src = "drawCheckCode?" + Math.random();
     }
 </script>
-<script type="text/javascript">
+<script th:inline="javascript">
     $(document).ready(function () {
         var submit = $("#submitBtn");
         var loginForm = $("#login_form");
@@ -102,7 +102,7 @@
                     success: function (message) {
                         submit.prop("disabled", false);
                         if (message.status == 200) {
-                            location.href = "<%=path %>/index";
+                            location.href = /*[[@{/admin-web}]]*/;
                         } else {
                             if (message.data == "验证码错误") {
                                 $("#captcha").val("");

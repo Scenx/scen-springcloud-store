@@ -5,7 +5,7 @@ import com.scen.common.utils.FtpUtil;
 import com.scen.common.utils.IDUtils;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -18,6 +18,7 @@ import java.util.Map;
  * @author Scen
  * @date 2018/5/12 9:45
  */
+@RestController
 public class PictureServiceImpl implements PictureService {
     @Value("${FTP_ADDRESS}")
     private String FTP_ADDRESS;
@@ -38,7 +39,7 @@ public class PictureServiceImpl implements PictureService {
     private String IMAGE_BASE_URL;
 
     @Override
-    public Map uploadPicture(@RequestBody MultipartFile uploadFile) {
+    public Map uploadPicture(MultipartFile uploadFile) {
 
         Map resultMap = new HashMap();
 

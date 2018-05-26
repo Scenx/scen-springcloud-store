@@ -49,6 +49,8 @@
         <joda-time.version>2.9.9</joda-time.version>
         <!--shiro权限控制-->
         <shiro.version>1.4.0</shiro.version>
+        <!--feign文件上传-->
+        <feign.form.version>3.3.0</feign.form.version>
     </properties>
 
 
@@ -128,6 +130,16 @@
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-spring</artifactId>
                 <version>${shiro.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form</artifactId>
+                <version>${feign.form.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.github.openfeign.form</groupId>
+                <artifactId>feign-form-spring</artifactId>
+                <version>${feign.form.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

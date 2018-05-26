@@ -11,8 +11,8 @@ import org.apache.shiro.authz.AuthorizationInfo;
 import org.apache.shiro.authz.SimpleAuthorizationInfo;
 import org.apache.shiro.realm.AuthorizingRealm;
 import org.apache.shiro.subject.PrincipalCollection;
+import org.springframework.beans.factory.annotation.Autowired;
 
-import javax.annotation.Resource;
 
 
 /**
@@ -21,7 +21,7 @@ import javax.annotation.Resource;
  */
 public class MyRealm extends AuthorizingRealm {
 
-    @Resource
+    @Autowired
     private AdminUserService adminUserService;
 
 

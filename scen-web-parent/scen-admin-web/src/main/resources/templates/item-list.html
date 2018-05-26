@@ -36,7 +36,7 @@
      style="width:80%;height:80%;padding:10px;">
 </div>
 
-<script>
+<script th:inline="javascript">
 
 
     function getSelectionsIds() {
@@ -229,7 +229,7 @@
 
         if ($("#searchStartPrice").val() <= $("#searchEndPrice").val() || $("#searchEndPrice").val() == null || $("#searchEndPrice").val() == "") {
 
-            window.location.href = "${pageContext.request.contextPath}/item/outputExcel?id="
+            window.location.href = /*[[@{/item/outputExcel?id=}]]*/
                 + $("#searchId").val()
                 + "&title="
                 + $("#searchTitle").val()
