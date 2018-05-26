@@ -33,4 +33,14 @@ public interface SsoCacheService {
      */
     @RequestMapping("/ssoCacheService/getUserByToken")
     ScenResult getUserByToken(@RequestParam("token") String token);
+
+
+    /**
+     * 根据用户使用浏览器里的cookie存储的session令牌注销用户
+     *
+     * @param token
+     * @return
+     */
+    @RequestMapping("/ssoCacheService/logoutUserByToken")
+    ScenResult logoutUserByToken(@RequestParam("token") String token);
 }

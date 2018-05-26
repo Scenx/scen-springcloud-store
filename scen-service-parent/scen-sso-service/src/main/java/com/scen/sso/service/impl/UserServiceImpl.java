@@ -101,10 +101,4 @@ public class UserServiceImpl implements UserService {
 //        返回token
         return ScenResult.ok(token);
     }
-
-
-    @Override
-    public ScenResult logoutUserByToken(String token) {
-        return null;
-    }
 }

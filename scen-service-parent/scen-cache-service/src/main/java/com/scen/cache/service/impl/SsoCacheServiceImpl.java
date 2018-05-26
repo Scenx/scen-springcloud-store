@@ -38,10 +38,12 @@ public class SsoCacheServiceImpl implements SsoCacheService {
     @RabbitListener(queues = "addUserSession")
     @RabbitHandler
     public void addUserSession(@RequestBody Map<String, String> map) {
-        String token = map.get("token");
-        String user = map.get("user");
-        redisTemplate.opsForValue().set(REDIS_USER_SESSION_KEY + ":" + token, user);
-        redisTemplate.expire(REDIS_USER_SESSION_KEY + ":" + token, SSO_SESSION_EXPIRE, TimeUnit.SECONDS);
+        if (map != null) {
+            String token = map.get("token");
+            String user = map.get("user");
+            redisTemplate.opsForValue().set(REDIS_USER_SESSION_KEY + ":" + token, user);
+            redisTemplate.expire(REDIS_USER_SESSION_KEY + ":" + token, SSO_SESSION_EXPIRE, TimeUnit.SECONDS);
+        }
     }
 
     @Override
@@ -56,5 +58,16 @@ public class SsoCacheServiceImpl implements SsoCacheService {
         redisTemplate.expire(REDIS_USER_SESSION_KEY + ":" + token, SSO_SESSION_EXPIRE, TimeUnit.SECONDS);
 //        返回用户信息
         return ScenResult.ok(JsonUtils.jsonToPojo(json, User.class));
+    }
+
+    @Override
+    public ScenResult logoutUserByToken(String token) {
+        try {
+            redisTemplate.delete(REDIS_USER_SESSION_KEY + ":" + token);
+            return ScenResult.ok("");
+        } catch (Exception e) {
+            e.printStackTrace();
+            return ScenResult.build(500, "服务器繁忙。。。");
+        }
     }
 }

@@ -53,13 +53,4 @@ public interface UserService {
             @RequestParam("password") String password
     );
 
-
-    /**
-     * 根据用户使用浏览器里的cookie存储的session令牌注销用户
-     *
-     * @param token
-     * @return
-     */
-    @RequestMapping("/userService/logoutUserByToken")
-    ScenResult logoutUserByToken(@RequestParam("token") String token);
 }

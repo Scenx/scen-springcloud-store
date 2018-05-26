@@ -28,9 +28,4 @@ public class UserServiceHystrix implements UserService {
         return ScenResult.build(233, "服务不可用");
     }
 
-
-    @Override
-    public ScenResult logoutUserByToken(String token) {
-        return ScenResult.build(233, "服务不可用");
-    }
 }

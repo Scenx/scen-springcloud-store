@@ -155,7 +155,7 @@ public class UserController {
     public Object logoutUserByToken(@PathVariable String token, String callback) {
         ScenResult result = null;
         try {
-            result = userService.logoutUserByToken(token);
+            result = ssoCacheService.logoutUserByToken(token);
         } catch (Exception e) {
             e.printStackTrace();
             result = ScenResult.build(500, ExceptionUtil.getStackTrace(e));
