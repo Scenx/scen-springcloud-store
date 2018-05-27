@@ -20,8 +20,7 @@ public class ItemDescServiceImpl implements ItemDescService {
     private ItemDescDao itemDescDao;
 
     @Override
-    public ScenResult getItemDesc(Long itemId) {
-        ItemDesc itemDesc = itemDescDao.selectByPrimaryKey(itemId);
-        return ScenResult.ok(itemDesc);
+    public ItemDesc getItemDesc(Long itemId) {
+        return itemDescDao.selectByPrimaryKey(itemId);
     }
 }

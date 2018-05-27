@@ -38,7 +38,7 @@ public interface ContentCategoryService {
      * @throws Exception 抛出异常回滚事务
      */
     @RequestMapping("/contentCategoryService/insertContenCategory")
-    ScenResult insertContenCategory(
+    ContentCategory insertContenCategory(
             @RequestParam("parentId") Long parentId,
             @RequestParam("name") String name
     ) throws Exception;

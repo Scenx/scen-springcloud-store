@@ -1,6 +1,7 @@
 package com.scen.item.service;
 
 import com.scen.item.service.hystrix.ItemDescServiceHystrix;
+import com.scen.pojo.ItemDesc;
 import com.scen.vo.ScenResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -22,7 +23,7 @@ public interface ItemDescService {
      * @return
      */
     @RequestMapping("/itemDescService/getItemDesc")
-    ScenResult getItemDesc(
+    ItemDesc getItemDesc(
             @RequestParam("itemId") Long itemId
     );
 }

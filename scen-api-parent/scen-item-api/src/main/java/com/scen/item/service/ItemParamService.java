@@ -24,7 +24,7 @@ public interface ItemParamService {
      * @return
      */
     @RequestMapping("/itemParamService/getItemParamByCid")
-    ScenResult getItemParamByCid(
+    ItemParam getItemParamByCid(
             @RequestParam("cid") Long cid
     );
 

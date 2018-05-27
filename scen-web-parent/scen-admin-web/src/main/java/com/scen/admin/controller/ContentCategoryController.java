@@ -47,7 +47,8 @@ public class ContentCategoryController {
     @RequestMapping("/create")
     public ScenResult createContentCategory(Long parentId, String name) {
         try {
-            return contentCategoryService.insertContenCategory(parentId, name);
+            ContentCategory contentCategory = contentCategoryService.insertContenCategory(parentId, name);
+            return ScenResult.ok(contentCategory);
         } catch (Exception e) {
             e.printStackTrace();
             return ScenResult.build(500, "添加失败");

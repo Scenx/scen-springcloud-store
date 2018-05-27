@@ -150,7 +150,8 @@ public class ItemController {
      */
     @RequestMapping("/desc/{itemId}")
     public ScenResult getItemDesc(@PathVariable Long itemId) {
-        return itemDescService.getItemDesc(itemId);
+        ItemDesc itemDesc = itemDescService.getItemDesc(itemId);
+        return ScenResult.ok(itemDesc);
     }
 
     /**

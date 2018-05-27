@@ -15,8 +15,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class ItemParamServiceHystrix implements ItemParamService {
     @Override
-    public ScenResult getItemParamByCid(Long cid) {
-        return ScenResult.build(233, "服务不可用");
+    public ItemParam getItemParamByCid(Long cid) {
+        return null;
     }
 
     @Override

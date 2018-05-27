@@ -1,7 +1,7 @@
 package com.scen.item.service.hystrix;
 
 import com.scen.item.service.ItemDescService;
-import com.scen.vo.ScenResult;
+import com.scen.pojo.ItemDesc;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ItemDescServiceHystrix implements ItemDescService {
     @Override
-    public ScenResult getItemDesc(Long itemId) {
-        return ScenResult.build(233, "服务不可用");
+    public ItemDesc getItemDesc(Long itemId) {
+        return null;
     }
 }

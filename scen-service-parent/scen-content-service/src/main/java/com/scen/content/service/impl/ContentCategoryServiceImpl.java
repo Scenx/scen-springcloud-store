@@ -50,7 +50,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
 
     @Override
     @Transactional(rollbackFor = Exception.class)
-    public ScenResult insertContenCategory(Long parentId, String name) throws Exception {
+    public ContentCategory insertContenCategory(Long parentId, String name) throws Exception {
         //        创建一个pojo
         ContentCategory contentCategory = new ContentCategory();
         contentCategory.setName(name);
@@ -68,7 +68,7 @@ public class ContentCategoryServiceImpl implements ContentCategoryService {
             parentCat.setIsParent(true);
             contentCategoryDao.updateByPrimaryKey(parentCat);
         }
-        return ScenResult.ok(contentCategory);
+        return contentCategory;
     }
 
     @Override

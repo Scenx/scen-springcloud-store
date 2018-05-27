@@ -28,7 +28,7 @@ public class ItemParamItemController {
      */
     @RequestMapping("/query/{itemId}")
     public ScenResult getParamData(@PathVariable Long itemId) {
-        return itemParamItemService.getItemParamByItemId(itemId);
+        return ScenResult.ok(itemParamItemService.getItemParamByItemId(itemId));
     }
 
 }

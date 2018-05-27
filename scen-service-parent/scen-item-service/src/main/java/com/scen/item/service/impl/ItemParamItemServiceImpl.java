@@ -24,15 +24,15 @@ public class ItemParamItemServiceImpl implements ItemParamItemService {
     private ItemParamItemDao itemParamItemDao;
 
     @Override
-    public ScenResult getItemParamByItemId(Long itemId) {
+    public ItemParamItem getItemParamByItemId(Long itemId) {
         Example example = new Example(ItemParamItem.class);
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("itemId", itemId);
         List<ItemParamItem> list = itemParamItemDao.selectByExample(example);
         if (list == null || list.size() == 0) {
-            return ScenResult.ok();
+            return null;
         }
         ItemParamItem itemParamItem = list.get(0);
-        return ScenResult.ok(itemParamItem);
+        return itemParamItem;
     }
 }

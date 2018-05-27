@@ -32,16 +32,16 @@ public class ItemParamServiceImpl implements ItemParamService {
     private ItemParamDao itemParamDao;
 
     @Override
-    public ScenResult getItemParamByCid(Long cid) {
+    public ItemParam getItemParamByCid(Long cid) {
         Example example = new Example(ItemParam.class);
         Example.Criteria criteria = example.createCriteria();
         criteria.andEqualTo("itemCatId", cid);
         List<ItemParam> list = itemParamDao.selectByExample(example);
 //        判断是否查询到结果
         if (list != null && list.size() > 0) {
-            return ScenResult.ok(list.get(0));
+            return list.get(0);
         }
-        return ScenResult.ok();
+        return null;
     }
 
     @Override

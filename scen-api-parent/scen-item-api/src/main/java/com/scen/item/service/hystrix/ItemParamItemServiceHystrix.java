@@ -1,7 +1,7 @@
 package com.scen.item.service.hystrix;
 
 import com.scen.item.service.ItemParamItemService;
-import com.scen.vo.ScenResult;
+import com.scen.pojo.ItemParamItem;
 import org.springframework.stereotype.Component;
 
 /**
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class ItemParamItemServiceHystrix implements ItemParamItemService {
     @Override
-    public ScenResult getItemParamByItemId(Long itemId) {
-        return ScenResult.build(233, "服务不可用");
+    public ItemParamItem getItemParamByItemId(Long itemId) {
+        return null;
     }
 }

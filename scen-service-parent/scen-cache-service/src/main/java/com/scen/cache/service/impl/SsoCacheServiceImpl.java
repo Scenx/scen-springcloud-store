@@ -32,7 +32,7 @@ public class SsoCacheServiceImpl implements SsoCacheService {
     private String REDIS_USER_SESSION_KEY;
 
     @Value("${SSO_SESSION_EXPIRE}")
-    private Integer SSO_SESSION_EXPIRE;
+    private Long SSO_SESSION_EXPIRE;
 
     @Override
     @RabbitListener(queues = "addUserSession")

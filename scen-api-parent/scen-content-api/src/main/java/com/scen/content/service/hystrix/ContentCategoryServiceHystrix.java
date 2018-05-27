@@ -23,8 +23,8 @@ public class ContentCategoryServiceHystrix implements ContentCategoryService {
     }
 
     @Override
-    public ScenResult insertContenCategory(Long parentId, String name) throws Exception {
-        return ScenResult.build(233, "服务不可用");
+    public ContentCategory insertContenCategory(Long parentId, String name) throws Exception {
+        return null;
     }
 
     @Override

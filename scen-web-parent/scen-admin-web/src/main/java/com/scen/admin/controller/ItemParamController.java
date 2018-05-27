@@ -30,7 +30,7 @@ public class ItemParamController {
      */
     @RequestMapping("/query/itemcatid/{itemCatId}")
     public ScenResult getItemParamByCid(@PathVariable Long itemCatId) {
-        return itemParamService.getItemParamByCid(itemCatId);
+        return ScenResult.ok(itemParamService.getItemParamByCid(itemCatId));
     }
 
     /**
