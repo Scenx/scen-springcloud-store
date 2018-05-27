@@ -98,4 +98,15 @@ public class ContentServiceImpl implements ContentService {
         rabbitTemplate.convertAndSend(SYNC_CONTENT_EXCHANGE, SYNC_CONTENT_ROUTING_KEY, content.getCategoryId());
         return ScenResult.ok();
     }
+
+    @Override
+    public List<Content> getContentList(Long contentCid) {
+        //        根据内容分类id查询内容列表
+        Example example = new Example(Content.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("categoryId", contentCid);
+//        执行查询
+        List<Content> list = contentDao.selectByExample(example);
+        return list;
+    }
 }

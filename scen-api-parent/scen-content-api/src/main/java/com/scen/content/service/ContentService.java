@@ -9,6 +9,8 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 /**
  * 内容接口
  *
@@ -69,4 +71,13 @@ public interface ContentService {
     ScenResult editContent(
             Content content
     ) throws Exception;
+
+    /**
+     * 获取首页大广告内容
+     *
+     * @param contentCid
+     * @return
+     */
+    @RequestMapping("/contentService/getPortalContentList")
+    List<Content> getContentList(@RequestParam("contentCid") Long contentCid);
 }

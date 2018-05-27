@@ -7,6 +7,8 @@ import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ScenResult;
 import org.springframework.stereotype.Component;
 
+import java.util.List;
+
 /**
  * 内容熔断器
  *
@@ -33,5 +35,10 @@ public class ContentServiceHystrix implements ContentService {
     @Override
     public ScenResult editContent(Content content) {
         return ScenResult.build(233, "服务不可用");
+    }
+
+    @Override
+    public List<Content> getContentList(Long contentCid) {
+        return null;
     }
 }

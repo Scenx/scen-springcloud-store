@@ -84,7 +84,7 @@ public class Item implements Serializable {
     }
 
     public void setImage(String image) {
-        this.image = image;
+        this.image = image == null ? null : image.trim();
     }
 
 

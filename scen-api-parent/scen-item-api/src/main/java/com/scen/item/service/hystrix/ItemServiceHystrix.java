@@ -5,6 +5,7 @@ import com.scen.pojo.Item;
 import com.scen.pojo.ItemDesc;
 import com.scen.pojo.ItemParamItem;
 import com.scen.vo.EUDdataGridResult;
+import com.scen.vo.ItemInfo;
 import com.scen.vo.ScenResult;
 import com.scen.vo.SolrIf;
 import org.springframework.stereotype.Component;
