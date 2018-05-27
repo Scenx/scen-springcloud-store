@@ -7,7 +7,7 @@ import com.scen.common.utils.ExceptionUtil;
 import com.scen.pojo.User;
 import com.scen.sso.service.UserService;
 import com.scen.vo.ScenResult;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.converter.json.MappingJacksonValue;

@@ -4,7 +4,7 @@ import com.scen.cache.service.SsoCacheService;
 import com.scen.common.utils.JsonUtils;
 import com.scen.pojo.User;
 import com.scen.vo.ScenResult;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.rabbit.annotation.RabbitHandler;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;

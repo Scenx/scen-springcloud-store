@@ -13,7 +13,6 @@ import tk.mybatis.spring.annotation.MapperScan;
  * @date 2018/4/28 10:41
  */
 @SpringBootApplication
-@EnableEurekaClient
 @MapperScan(basePackages = "com.scen.dao")
 @EnableApolloConfig
 public class ScenSsoServiceApplication {

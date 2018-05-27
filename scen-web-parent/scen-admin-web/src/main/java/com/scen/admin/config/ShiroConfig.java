@@ -1,5 +1,6 @@
 package com.scen.admin.config;
 
+import at.pollux.thymeleaf.shiro.dialect.ShiroDialect;
 import com.scen.admin.realm.MyRealm;
 import com.scen.common.utils.Captcha;
 import feign.Logger;
@@ -101,6 +102,11 @@ public class ShiroConfig {
 
         return Logger.Level.FULL;
 
+    }
+
+    @Bean
+    public ShiroDialect shiroDialect() {
+        return new ShiroDialect();
     }
 
 

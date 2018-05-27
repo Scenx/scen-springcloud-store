@@ -12,7 +12,6 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
  * @date 2018/5/17 17:16
  */
 @SpringBootApplication
-@EnableEurekaClient
 @EnableApolloConfig
 public class ScenCacheServiceApplication {
     public static void main(String[] args) {

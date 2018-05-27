@@ -15,7 +15,7 @@ import com.scen.vo.EUDdataGridResult;
 import com.scen.vo.ItemBean;
 import com.scen.vo.ScenResult;
 import com.scen.vo.SolrIf;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

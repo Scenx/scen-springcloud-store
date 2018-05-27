@@ -13,7 +13,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  * @date 2018/4/28 10:41
  */
 @SpringBootApplication
-@EnableEurekaClient
 @EnableFeignClients
 @EnableApolloConfig
 public class ScenSsoWebApplication {
