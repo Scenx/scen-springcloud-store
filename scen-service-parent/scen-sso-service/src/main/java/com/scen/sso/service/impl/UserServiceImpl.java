@@ -1,6 +1,5 @@
 package com.scen.sso.service.impl;
 
-import com.scen.common.utils.CookieUtils;
 import com.scen.common.utils.JsonUtils;
 import com.scen.dao.UserDao;
 import com.scen.pojo.User;
