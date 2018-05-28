@@ -1,6 +1,7 @@
 package com.scen.item.service;
 
 import com.scen.item.service.hystrix.ItemCatServiceHystrix;
+import com.scen.pojo.ItemCat;
 import com.scen.vo.EUTreeNode;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,4 +27,12 @@ public interface ItemCatService {
     List<EUTreeNode> getCatList(
             @RequestParam("parentId") Long parentId
     );
+
+    /**
+     * 根据id查询商品类目
+     * @param itemCid
+     * @return
+     */
+    @RequestMapping("itemCatService/getCatList")
+    ItemCat getItemCatById(@RequestParam("itemCid") Long itemCid);
 }

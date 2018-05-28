@@ -1,7 +1,7 @@
 package com.scen.portal.controller;
 
-import com.scen.pojo.CartItem;
-import com.scen.portal.service.CartService;
+import com.scen.cart.service.CartService;
+import com.scen.vo.CartItem;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

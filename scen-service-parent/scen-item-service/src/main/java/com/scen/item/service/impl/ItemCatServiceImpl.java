@@ -41,4 +41,9 @@ public class ItemCatServiceImpl implements ItemCatService {
         }
         return resultList;
     }
+
+    @Override
+    public ItemCat getItemCatById(Long itemCid) {
+        return itemCatDao.selectByPrimaryKey(itemCid);
+    }
 }
