@@ -80,7 +80,7 @@
 } catch (e) {
 }</script>
 <!-- header start -->
-<div th:replace="commons/header::html"></div>
+<div th:replace="commons/header :: #header-header"></div>
 <!-- header end -->
 <div class="w">
     <div class="breadcrumb">
@@ -363,7 +363,7 @@
     <span class="clr"></span>
 </div>
 <!-- footer start -->
-<div th:replace="commons/footer::html"></div>
+<div th:replace="commons/footer :: #footer-footer"></div>
 <!-- footer end -->
 <script type="text/javascript" th:src="@{/js/jquery-1.6.4.js}"></script>
 <script type="text/javascript" th:src="@{/js/lib-v1.js}"></script>

@@ -17,7 +17,7 @@
     </script>
 <body>
 <!--shortcut start-->
-<div th:replace="commons/shortcut::html" ></div>
+<div th:replace="commons/shortcut :: #shortcut-shortcut"></div>
 
 <!--shortcut end-->
 <div class="w w1 header clearfix">
@@ -177,7 +177,7 @@
 
 <script type="text/javascript" th:src="@{/js/base-v1.js}"></script>
 <!-- footer start -->
-<div th:replace="commons/footer::html"></div>
+<div th:replace="commons/footer :: #footer-footer"></div>
 <!-- footer end -->
 
 <!-- 购物车相关业务 -->

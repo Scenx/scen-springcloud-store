@@ -16,7 +16,7 @@
 <body>
 <script type="text/javascript" th:src="@{/js/base-2011.js}" charset="utf-8"></script>
 <!-- header start -->
-<div th:replace="commons/header::html"></div>
+<div th:replace="commons/header :: #header-header"></div>
 <!-- header end -->
 <div class="w main">
     <div class="crumb">全部结果&nbsp;&gt;&nbsp;<strong th:text="${query}"></strong></div>
@@ -65,7 +65,7 @@
     </div>
 </div>
 <!-- footer start -->
-<div th:replace="commons/footer::html"></div>
+<div th:replace="commons/footer :: #footer-footer"></div>
 <!-- footer end -->
 <script type="text/javascript" th:src="@{/js/jquery.hashchange.js}"></script>
 <script type="text/javascript" th:src="@{/js/search_main.js}"></script>

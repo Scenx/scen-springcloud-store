@@ -2,11 +2,11 @@
 Date: 2014-01-21
 */
 function login() {
-    return location.href = "http://localhost:8085/page/login";
+    return location.href = "http://localhost:48089/page/login";
 }
 
 function regist() {
-    return location.href = "http://localhost:8085/page/register";
+    return location.href = "http://localhost:48089/page/register";
 }
 
 function createCookie(a, b, c, d) {
@@ -37,7 +37,7 @@ function addToFavorite() {
 }
 
 function search(a) {
-    var b = "http://localhost:8084/search.html?q=" + encodeURIComponent(document.getElementById(a).value);
+    var b = "http://localhost:48090/search.html?q=" + encodeURIComponent(document.getElementById(a).value);
     return window.location.href = b;
 }
 

@@ -3,6 +3,7 @@ package com.scen.item.service.impl;
 import com.scen.dao.ItemCatDao;
 import com.scen.item.service.ItemCatService;
 import com.scen.pojo.ItemCat;
+import com.scen.vo.CatNode;
 import com.scen.vo.EUTreeNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
@@ -45,5 +46,37 @@ public class ItemCatServiceImpl implements ItemCatService {
     @Override
     public ItemCat getItemCatById(Long itemCid) {
         return itemCatDao.selectByPrimaryKey(itemCid);
+    }
+
+    @Override
+    public List<?> getPortalCatList(Long parentId) {
+        //创建查询条件
+        Example example = new Example(ItemCat.class);
+        Example.Criteria criteria = example.createCriteria();
+        criteria.andEqualTo("parentId", parentId);
+//        执行查询
+        List<ItemCat> list = itemCatDao.selectByExample(example);
+//        返回值list
+        List resultList = new ArrayList<>();
+//        向list中添加节点
+        for (ItemCat ItemCat : list) {
+//            判断是否为父节点
+            if (ItemCat.getIsParent()) {
+                CatNode catNode = new CatNode();
+                if (parentId == 0) {
+                    catNode.setName("<a href='/products/" + ItemCat.getId() + ".html'>" + ItemCat.getName() + "</a>");
+                } else {
+                    catNode.setName(ItemCat.getName());
+                }
+                catNode.setUrl("/products/" + ItemCat.getId() + ".html");
+                catNode.setItem(getPortalCatList(ItemCat.getId()));
+                resultList.add(catNode);
+            } else {
+//                如果是叶子节点
+                resultList.add("/products/" + ItemCat.getId() + ".html|" + ItemCat.getName());
+            }
+
+        }
+        return resultList;
     }
 }

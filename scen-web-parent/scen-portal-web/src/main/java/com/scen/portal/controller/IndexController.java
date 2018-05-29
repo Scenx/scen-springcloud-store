@@ -35,7 +35,7 @@ public class IndexController {
      * @param model
      * @return
      */
-    @RequestMapping("/")
+    @RequestMapping("/index")
     public String showIndex(Model model) {
         List<Content> contentList = null;
         contentList = contentCacheService.getContentList(89L);

@@ -1898,7 +1898,7 @@ SEARCH.page = function (b, a) {
     if (b < 1) {
         b = 1
     }
-    window.location = "http://localhost:8084/search.html?q=" + SEARCH.query + "&page=" + b;
+    window.location = "http://localhost:48090/search.html?q=" + SEARCH.query + "&page=" + b;
 //    if (a) {
 //        window.scrollTo(0, $("#filter").offset().top)
 //    }

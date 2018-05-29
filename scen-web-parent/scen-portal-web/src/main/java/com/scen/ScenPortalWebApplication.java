@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * 单点登录微服务消费者
+ * 门户微服务消费者
  *
  * @author Scen
  * @date 2018/4/28 10:41

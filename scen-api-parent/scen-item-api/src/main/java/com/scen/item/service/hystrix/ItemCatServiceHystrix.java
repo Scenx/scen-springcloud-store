@@ -24,4 +24,9 @@ public class ItemCatServiceHystrix implements ItemCatService {
     public ItemCat getItemCatById(Long itemCid) {
         return null;
     }
+
+    @Override
+    public List<?> getPortalCatList(Long parentId) {
+        return null;
+    }
 }

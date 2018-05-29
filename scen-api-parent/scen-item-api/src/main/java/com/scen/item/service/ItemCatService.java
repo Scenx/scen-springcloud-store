@@ -33,6 +33,17 @@ public interface ItemCatService {
      * @param itemCid
      * @return
      */
-    @RequestMapping("itemCatService/getCatList")
+    @RequestMapping("itemCatService/getItemCatById")
     ItemCat getItemCatById(@RequestParam("itemCid") Long itemCid);
+
+
+    /**
+     * 查询门户分类列表的方法
+     *
+     * @param parentId
+     * @return
+     */
+    @RequestMapping("itemCatService/getPortalCatList")
+    List<?> getPortalCatList(@RequestParam("parentId") Long parentId);
+
 }

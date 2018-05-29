@@ -1,3 +1,4 @@
+<div id="footer-footer">
 <div class="w" clstag="homepage|keycount|home2013|37a">
     <div id="service-2013">
         <dl class="fore1">
@@ -73,7 +74,7 @@
     </div>
 </div>
 <div class="w" clstag="homepage|keycount|home2013|38a">
-    <div th:replace="footer-links::html" ></div>
+    <div th:replace="commons/footer-links :: #footer-links-footer-links"></div>
 </div>
 <script th:src="@{/js/jquery-1.6.4.js}"></script>
 <script th:src="@{/js/jquery-extend.js}"></script>
@@ -101,3 +102,4 @@
     });
 })();
 </script>
+</div>

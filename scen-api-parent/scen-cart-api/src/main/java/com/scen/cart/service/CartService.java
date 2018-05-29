@@ -54,6 +54,7 @@ public interface CartService {
      * @param itemList
      * @return
      */
+    @RequestMapping("cartService/deleteCartItem")
     List<CartItem> deleteCartItem(
             @RequestParam("itemId") Long itemId,
             List<CartItem> itemList);

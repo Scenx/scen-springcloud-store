@@ -20,7 +20,7 @@
     <script type="text/javascript" th:src="@{/js/jquery.checkout.js}"></script>
 </head>
 <body id="mainframe">
-<div th:replace="commons/shortcut::html"></div>
+<div th:replace="commons/shortcut :: #shortcut-shortcut"></div>
 <!--shortcut end-->
 <div th:with="totalPirce=0">
     <div class="w w1 header clearfix">
@@ -340,6 +340,6 @@
 </div>
 <div/>
 <!-- /main -->
-<div th:replace="commons/footer::html"></div>
+<div th:replace="commons/footer :: #footer-footer"></div>
 </body>
 </html>
