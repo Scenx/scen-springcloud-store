@@ -1,12 +1,11 @@
 package com.scen.portal.controller;
 
-import com.scen.common.utils.HttpClientUtil;
-import com.scen.pojo.ScenResult;
-import com.scen.pojo.SearchResult;
-import com.scen.pojo.TbItemCat;
-import com.scen.portal.service.SearchService;
+import com.scen.item.service.ItemCatService;
+import com.scen.pojo.ItemCat;
+import com.scen.search.service.SearchItemService;
+import com.scen.vo.SearchResult;
+import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -22,11 +21,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 @Controller
 public class SearchController {
 
-    @Value("${REST_BASE_URL}")
-    private String REST_BASE_URL;
+    @Autowired
+    private SearchItemService searchItemService;
 
     @Autowired
-    private SearchService searchService;
+    private ItemCatService itemCatService;
+
 
     /**
      * 搜索商品
@@ -37,8 +37,12 @@ public class SearchController {
      * @return
      */
     @RequestMapping("/search")
-    public String search(@RequestParam("q") String queryString, @RequestParam(defaultValue = "1") Integer page, Model model) {
-        SearchResult searchResult = searchService.search(queryString, page);
+    public String search(@RequestParam("q") String queryString, @RequestParam(defaultValue = "1") Integer page, Model model) throws Exception {
+        //        查询条件不能为空
+        if (StringUtils.isBlank(queryString)) {
+            return "search";
+        }
+        SearchResult searchResult = searchItemService.getPortalItems(queryString, page, null);
 //        回显数据
         model.addAttribute("query", queryString);
         model.addAttribute("totalPages", searchResult.getPageCount());
@@ -49,12 +53,10 @@ public class SearchController {
 
 
     @RequestMapping("/products/{itemCid}")
-    public String searchByItemCid(@PathVariable Long itemCid, @RequestParam(defaultValue = "1") Integer page, Model model) {
-        String json = HttpClientUtil.doGet(REST_BASE_URL + "/itemCat/" + itemCid);
-        ScenResult scenResultItemCat = ScenResult.formatToPojo(json, TbItemCat.class);
-        TbItemCat itemCat = (TbItemCat) scenResultItemCat.getData();
+    public String searchByItemCid(@PathVariable Long itemCid, @RequestParam(defaultValue = "1") Integer page, Model model) throws Exception {
+        ItemCat itemCat = itemCatService.getItemCatById(itemCid);
         String queryString = itemCat.getName();
-        SearchResult searchResult = searchService.search(queryString, page);
+        SearchResult searchResult = searchItemService.getPortalItems(queryString, page, null);
 //        回显数据
         model.addAttribute("query", queryString);
         model.addAttribute("totalPages", searchResult.getPageCount());

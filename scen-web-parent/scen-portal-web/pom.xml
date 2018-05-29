@@ -21,6 +21,36 @@
             <artifactId>scen-cart-api</artifactId>
             <version>2.0-SNAPSHOT</version>
         </dependency>
+        <dependency>
+            <groupId>com.scen.cloud</groupId>
+            <artifactId>scen-cache-api</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scen.cloud</groupId>
+            <artifactId>scen-item-api</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scen.cloud</groupId>
+            <artifactId>scen-content-api</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scen.cloud</groupId>
+            <artifactId>scen-order-api</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scen.cloud</groupId>
+            <artifactId>scen-search-api</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.scen.cloud</groupId>
+            <artifactId>scen-common</artifactId>
+            <version>2.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
 </project>

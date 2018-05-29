@@ -18,7 +18,6 @@ public class CartServiceImpl implements CartService {
     @Override
     public CartItem getCartItem(
             Long itemId,
-            Integer num,
             @RequestBody List<CartItem> itemList
     ) {
         CartItem cartItem = null;
@@ -26,13 +25,28 @@ public class CartServiceImpl implements CartService {
         for (CartItem cItem : itemList) {
 //            如果存在此商品
             if (cItem.getId().equals(itemId)) {
-//                增加商品数量
-                cItem.setNum(cItem.getNum() + num);
                 cartItem = cItem;
                 break;
             }
         }
         return cartItem;
+    }
+
+    @Override
+    public List<CartItem> addCartItemNum(
+            Long itemId,
+            Integer num,
+            @RequestBody List<CartItem> itemList
+    ) {
+        for (CartItem cItem : itemList) {
+//            如果存在此商品
+            if (cItem.getId().equals(itemId)) {
+                //                增加商品数量
+                cItem.setNum(cItem.getNum() + num);
+                break;
+            }
+        }
+        return itemList;
     }
 
     @Override

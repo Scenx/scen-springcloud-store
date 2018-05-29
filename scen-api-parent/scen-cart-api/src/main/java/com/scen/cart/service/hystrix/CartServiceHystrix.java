@@ -15,7 +15,12 @@ import java.util.List;
 @Component
 public class CartServiceHystrix implements CartService {
     @Override
-    public CartItem getCartItem(Long itemId, Integer num, List<CartItem> itemList) {
+    public CartItem getCartItem(Long itemId, List<CartItem> itemList) {
+        return null;
+    }
+
+    @Override
+    public List<CartItem> addCartItemNum(Long itemId, Integer num, List<CartItem> itemList) {
         return null;
     }
 

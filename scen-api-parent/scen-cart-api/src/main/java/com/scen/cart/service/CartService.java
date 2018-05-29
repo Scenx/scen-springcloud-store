@@ -22,12 +22,26 @@ public interface CartService {
      * 判断商品列表中是否存在此商品
      *
      * @param itemId
-     * @param num
      * @param itemList
      * @return
      */
     @RequestMapping("cartService/getCartItem")
     CartItem getCartItem(
+            @RequestParam("itemId") Long itemId,
+            List<CartItem> itemList
+    );
+
+
+    /**
+     * 把购物车中已存在的商品的数量+num
+     *
+     * @param itemId
+     * @param num
+     * @param itemList
+     * @return
+     */
+    @RequestMapping("cartService/addCartItemNum")
+    List<CartItem> addCartItemNum(
             @RequestParam("itemId") Long itemId,
             @RequestParam("num") Integer num,
             List<CartItem> itemList

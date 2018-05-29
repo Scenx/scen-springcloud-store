@@ -2,14 +2,12 @@ package com.scen.search.service.impl;
 
 import com.scen.common.utils.ExceptionUtil;
 import com.scen.dao.ItemDao;
-import com.scen.pojo.Item;
 import com.scen.search.service.SearchItemService;
 import com.scen.vo.ScenResult;
 import com.scen.vo.SearchItem;
 import com.scen.vo.SearchResult;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.SolrQuery;
-import org.apache.solr.client.solrj.SolrServerException;
 import org.apache.solr.client.solrj.response.QueryResponse;
 import org.apache.solr.common.SolrDocument;
 import org.apache.solr.common.SolrDocumentList;
@@ -17,7 +15,6 @@ import org.apache.solr.common.SolrInputDocument;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
