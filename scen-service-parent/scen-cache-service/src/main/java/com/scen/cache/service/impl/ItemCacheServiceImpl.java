@@ -32,13 +32,13 @@ public class ItemCacheServiceImpl implements ItemCacheService {
     private Long REDIS_ITEM_EXPIRE;
 
     @Override
-    public Item getItemBaseInfo(Long itemId) {
+    public String getItemBaseInfo(Long itemId) {
         String json = redisTemplate.opsForValue().get(REDIS_ITEM_KEY + ":" + itemId + ":base");
         if (StringUtils.isBlank(json)) {
             return null;
         }
         //                把json转换成java对象
-        return JsonUtils.jsonToPojo(json, Item.class);
+        return json;
     }
 
     @Override

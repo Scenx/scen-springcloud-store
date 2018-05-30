@@ -70,7 +70,7 @@ public class CartController {
             cartItem = new CartItem();
             //        取商品信息
 //        根据商品id查询缓存中的商品基本信息
-            Item item = itemCacheService.getItemBaseInfo(itemId);
+            Item item = JsonUtils.jsonToPojo(itemCacheService.getItemBaseInfo(itemId), Item.class);
             if (item == null) {
 //                如果是空就去数据库中查并添加到缓存
                 item = itemService.getItemById(itemId);

@@ -14,7 +14,7 @@ import org.springframework.stereotype.Component;
 public class ItemCacheServiceHystrix implements ItemCacheService {
 
     @Override
-    public Item getItemBaseInfo(Long itemId) {
+    public String getItemBaseInfo(Long itemId) {
         return null;
     }
 

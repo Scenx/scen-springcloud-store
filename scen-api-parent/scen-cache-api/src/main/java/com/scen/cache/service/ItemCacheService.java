@@ -22,7 +22,7 @@ public interface ItemCacheService {
      * @return
      */
     @RequestMapping("/itemCacheService/getItemBaseInfo")
-    Item getItemBaseInfo(@RequestParam("itemId") Long itemId);
+    String getItemBaseInfo(@RequestParam("itemId") Long itemId);
 
 
     /**

@@ -2,6 +2,7 @@ package com.scen.portal.interceptor;
 
 import com.scen.cache.service.SsoCacheService;
 import com.scen.common.utils.CookieUtils;
+import com.scen.common.utils.JsonUtils;
 import com.scen.pojo.User;
 import com.scen.vo.ScenResult;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,7 +47,7 @@ public class LonginInterceptor implements HandlerInterceptor {
 //        根据token换取用户信息，调用sso系统的接口
         ScenResult result = ssoCacheService.getUserByToken(token);
         if (result.getStatus() == 200) {
-            user = (User) result.getData();
+            user = JsonUtils.jsonToPojo(JsonUtils.objectToJson(result.getData()), User.class);
         }
 //        取不到用户信息
         if (user == null) {
