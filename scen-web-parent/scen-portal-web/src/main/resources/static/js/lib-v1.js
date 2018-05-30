@@ -1494,7 +1494,7 @@ var category = {
             case 2:
                 c = b.split("|")[0], d = b.split("|")[1]
         }
-        return "" == c ? d : (/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-.\/?%&=]*)?$/.test(c) || (c = c.replace(/-000$/, ""), c = c.match(/^\d*-\d*$/) ? "http://channel.jd.com/" + c + ".html" : "http://localhost:48089" + c), '<a href="' + c + '">' + d + "</a>")
+        return "" == c ? d : (/^http[s]?:\/\/([\w-]+\.)+[\w-]+([\w-.\/?%&=]*)?$/.test(c) || (c = c.replace(/-000$/, ""), c = c.match(/^\d*-\d*$/) ? "http://channel.jd.com/" + c + ".html" : "http://localhost:48090" + c), '<a href="' + c + '">' + d + "</a>")
     },
     FN_SetLink: function (a) {
         var b = "", c = pageConfig.isHome ? 'clstag="homepage|keycount|home2013|0604e"' : "",

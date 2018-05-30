@@ -12,6 +12,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @author Scen
  * @date 2018/5/30 0:53
  */
+
 @Configuration
 public class LonginInterceptorConfig implements WebMvcConfigurer {
 
