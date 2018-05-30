@@ -37,12 +37,12 @@ public class SearchController {
      * @return
      */
     @RequestMapping("/search")
-    public String search(@RequestParam("q") String queryString, @RequestParam(defaultValue = "1") Integer page, Model model) throws Exception {
+    public String search(@RequestParam("q") String queryString, @RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "60") Integer rows, Model model) throws Exception {
         //        查询条件不能为空
         if (StringUtils.isBlank(queryString)) {
             return "search";
         }
-        SearchResult searchResult = searchItemService.getPortalItems(queryString, page, null);
+        SearchResult searchResult = searchItemService.getPortalItems(queryString, page, rows);
 //        回显数据
         model.addAttribute("query", queryString);
         model.addAttribute("totalPages", searchResult.getPageCount());
@@ -53,10 +53,10 @@ public class SearchController {
 
 
     @RequestMapping("/products/{itemCid}")
-    public String searchByItemCid(@PathVariable Long itemCid, @RequestParam(defaultValue = "1") Integer page, Model model) throws Exception {
+    public String searchByItemCid(@PathVariable Long itemCid, @RequestParam(defaultValue = "1") Integer page, @RequestParam(defaultValue = "60") Integer rows, Model model) throws Exception {
         ItemCat itemCat = itemCatService.getItemCatById(itemCid);
         String queryString = itemCat.getName();
-        SearchResult searchResult = searchItemService.getPortalItems(queryString, page, null);
+        SearchResult searchResult = searchItemService.getPortalItems(queryString, page, rows);
 //        回显数据
         model.addAttribute("query", queryString);
         model.addAttribute("totalPages", searchResult.getPageCount());

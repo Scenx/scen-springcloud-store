@@ -36,7 +36,7 @@ public interface SearchItemService {
     @RequestMapping("/searchItemService/getPortalItems")
     SearchResult getPortalItems(
             @RequestParam("queryString") String queryString,
-            @RequestParam(value = "page",defaultValue ="1") Integer page,
-            @RequestParam(value = "rows", defaultValue = "69") Integer rows
+            @RequestParam("page") Integer page,
+            @RequestParam("rows") Integer rows
     ) throws Exception;
 }
