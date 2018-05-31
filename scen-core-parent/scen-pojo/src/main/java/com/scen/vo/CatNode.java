@@ -6,7 +6,7 @@ import java.util.List;
 
 /**
  * 商品分类json数据模型
- *
+ *  解决
  * @author Scen
  * @date 2018/4/2 10:00
  */
