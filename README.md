@@ -40,3 +40,5 @@ portal8070<br>
 springcloud eureka注册中心48761<br>
 隐私配置信息存放在apollo配置中心，详情https://github.com/ctripcorp/apollo<br>
 个人本地调试请联系qq862351901获取隐私配置信息，如数据库连接池配置、redis配置、rabbitmq配置、solr配置。备注github<br>
+思维导图：http://naotu.baidu.com/file/51c46b2c3dad797d47f666b0b32c2eb8?token=c72128c2096879f1&qq-pf-to=pcqq.c2c <br>
+强烈建议！使用idea直接打开scen-parent工程就可以了
